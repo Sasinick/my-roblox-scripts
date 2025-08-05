@@ -1,0 +1,4 @@
+while true do
+print("aa")
+wait(0.1)
+end

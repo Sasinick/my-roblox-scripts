@@ -1,0 +1,6 @@
+while true do
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+wait(0.1)
+end

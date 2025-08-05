@@ -1,0 +1,6 @@
+while true do
+    game.Players.LocalPlayer.Character.Humanoid.Sit = true
+    wait(0.1)
+    game.Players.LocalPlayer.Character.Humanoid.Sit = false
+    wait(0.1)
+end

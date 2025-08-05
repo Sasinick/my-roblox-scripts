@@ -1,0 +1,5 @@
+if game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 16 then
+    print("WalkSpeed is 16")
+else
+print("WalkSpeed is not 16")
+end

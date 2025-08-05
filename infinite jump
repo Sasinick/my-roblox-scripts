@@ -1,0 +1,4 @@
+while true do
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+wait(0.1)
+end

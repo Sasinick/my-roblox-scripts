@@ -1,0 +1,1 @@
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.thitnuongsieucap.Character.HumanoidRootPart.CFrame

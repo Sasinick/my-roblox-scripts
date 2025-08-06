@@ -1,0 +1,4 @@
+while true do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.thitnuongsieucap.Character.HumanoidRootPart.CFrame
+wait(0.1)
+end

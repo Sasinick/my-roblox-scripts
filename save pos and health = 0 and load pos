@@ -1,0 +1,4 @@
+local d = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+wait(6)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = d

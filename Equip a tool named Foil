@@ -1,2 +1,0 @@
-local d = game.Players.LocalPlayer.Name
-game.Players.LocalPlayer.Backpack.Foil.Parent = workspace[d]

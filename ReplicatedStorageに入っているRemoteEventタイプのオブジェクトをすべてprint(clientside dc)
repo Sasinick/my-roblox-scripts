@@ -1,0 +1,5 @@
+for _, d in pairs(game.ReplicatedStorage:GetChildren()) do
+if d:IsA("RemoteEvent") then
+print(d)
+end
+end

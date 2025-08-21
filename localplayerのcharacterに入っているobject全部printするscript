@@ -1,0 +1,4 @@
+local d = game.Players.LocalPlayer.Name
+for _, a in pairs(workspace[d]:GetChildren()) do
+print(a)
+end

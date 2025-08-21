@@ -1,0 +1,3 @@
+for _, a in pairs(game.Players.beekon101a.Backpack:GetChildren()) do
+print(a)
+end

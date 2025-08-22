@@ -1,0 +1,3 @@
+local hint = Instance.new("Hint")
+hint.Parent = workspace
+hint.Text = "Hacked by Sasinick"

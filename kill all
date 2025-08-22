@@ -1,0 +1,3 @@
+for _, a in pairs(game.Players:GetChildren()) do
+    a.Character.Humanoid.Health = 0
+end

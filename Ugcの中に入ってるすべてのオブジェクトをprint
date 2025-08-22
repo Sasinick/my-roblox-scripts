@@ -1,0 +1,3 @@
+for _, d in pairs(game:GetChildren()) do
+    print(d)
+    end

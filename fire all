@@ -1,0 +1,6 @@
+local fire = Instance.new("Fire")
+fire.Heat = 40
+fire.Size = 20
+for _, a in pairs(game.Players:GetChildren()) do
+    fire.Parent = a.Character.HumanoidRootPart
+    end

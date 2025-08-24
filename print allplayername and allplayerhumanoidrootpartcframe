@@ -1,0 +1,5 @@
+for _, player in pairs(game.Players:GetPlayers()) do
+local d = player.Name
+local s = player.Character.HumanoidRootPart.CFrame
+print(d .. ":" .. tostring(s))
+    end

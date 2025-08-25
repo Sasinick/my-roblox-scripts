@@ -1,0 +1,1 @@
+game.Players.LocalPlayer.Character:PivotTo(CFrame.new(876, 27, 2346))

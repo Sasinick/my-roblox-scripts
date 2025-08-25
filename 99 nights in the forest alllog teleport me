@@ -1,0 +1,5 @@
+for _, a in pairs(workspace.Items:GetChildren()) do
+    if a.Name == "Log" then
+        a:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
+    end
+    end

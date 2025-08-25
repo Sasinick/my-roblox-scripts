@@ -1,0 +1,3 @@
+for _, a in pairs(workspace.Prison_Fences:GetChildren()) do
+    a:Destroy()
+    end

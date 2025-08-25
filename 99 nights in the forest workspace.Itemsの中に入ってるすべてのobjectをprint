@@ -1,0 +1,3 @@
+for _, a in pairs(workspace.Items:GetChildren()) do
+    print(a)
+    end

@@ -1,0 +1,1 @@
+workspace.Items.Log:PivotTo(game.Players.LocalPlayer.Character:GetPivot())

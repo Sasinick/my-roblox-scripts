@@ -1,0 +1,1 @@
+workspace.Map.Foliage["Small Tree"]:PivotTo(game.Players.LocalPlayer.Character:GetPivot())

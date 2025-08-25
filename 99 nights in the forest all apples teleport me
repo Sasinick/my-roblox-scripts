@@ -1,0 +1,5 @@
+for _, d in pairs(workspace.Items:GetChildren()) do
+    if d.name == "Apple" then
+        d:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
+    end
+    end

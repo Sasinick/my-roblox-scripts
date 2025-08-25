@@ -1,0 +1,4 @@
+local s = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character:PivotTo(workspace.Prison_ITEMS.giver["AK-47"]:GetPivot())
+wait(1)
+game.Players.LocalPlayer.Character:PivotTo(s)

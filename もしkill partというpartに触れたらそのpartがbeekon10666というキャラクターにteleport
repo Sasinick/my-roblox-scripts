@@ -1,0 +1,5 @@
+workspace["kill part"].Touched:Connect(function(hit)
+if hit.Parent == game.Players.LocalPlayer.Character then
+    workspace["kill part"]:PivotTo(game.Players.beekon10666.Character:GetPivot())
+end
+end)

@@ -1,0 +1,1 @@
+game.Players.beekon1043.Character:PivotTo(game.Players.beekon1043.Character:GetPivot() + Vector3.new(800, 0, 0))

@@ -21,5 +21,14 @@ end
 if inputText == "hh" then
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = inputText2
 end
+if inputText == "ad" then
+game.Players.LocalPlayer.Character.Animate:Destroy()
+end
+if inputText == "cr" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+if inputText == "st" then
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end
 end
 end)

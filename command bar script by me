@@ -16,5 +16,8 @@ end
 if inputText == "hhct50" then
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = 50
 end
+if inputText == "hhct10" then
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 10
+end
 end
 end)

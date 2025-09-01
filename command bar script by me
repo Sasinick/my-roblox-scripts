@@ -51,5 +51,8 @@ end
 if inputText == "cd" then
 workspace.Camera:Destroy()
 end
+if inputText == "tpl" then
+game.Players.LocalPlayer.Character:PivotTo(game.Players[inputText2].Character:GetPivot())
+end
 end
 end)

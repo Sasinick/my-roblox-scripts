@@ -30,5 +30,8 @@ end
 if inputText == "st" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
 end
+if inputText == "j" then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end
 end
 end)

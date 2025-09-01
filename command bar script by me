@@ -1,0 +1,17 @@
+local screengui = Instance.new("ScreenGui")
+local textbox = Instance.new("TextBox")
+screengui.Parent = game.Players.LocalPlayer.PlayerGui
+textbox.Parent = screengui
+textbox.Position = UDim2.new(0, 800 , 0, 8)
+textbox.Size = UDim2.new(0, 200 , 0, 50) 
+textbox.FocusLost:Connect(function(enterPressed)
+if enterPressed then 
+local inputText = textbox.Text
+if inputText == "wsct180" then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 180
+end
+if inputText == "wsct16" then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end
+end
+end)

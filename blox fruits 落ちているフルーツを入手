@@ -1,5 +1,8 @@
+local ds = game.Players.LocalPlayer.Character:GetPivot()
 for _, a in pairs(workspace:GetChildren()) do
     if a:IsA("Tool") then
         game.Players.LocalPlayer.Character:PivotTo(a:GetPivot())
+wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(ds)
     end
     end

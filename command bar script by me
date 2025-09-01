@@ -55,5 +55,10 @@ end
 if inputText == "ucf" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end
+if inputText == "awoo" then
+for _, a in pairs(workspace:GetChildren()) do
+print(a)
+end
+end
 end
 end)

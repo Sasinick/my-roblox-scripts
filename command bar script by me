@@ -9,7 +9,7 @@ textbox.Position = UDim2.new(0, 800 , 0, 8)
 textbox.Size = UDim2.new(0, 200 , 0, 50)
 textbox2.Name = "textbox2"
 textbox2.Parent = screengui
-textbox2.Position = UDim2.new(0.481, 0,0.014, 0)
+textbox2.Position = UDim2.new(0, 800 , 0, 100)
 textbox2.Size = UDim2.new(0, 200 , 0, 50)
 textbox.FocusLost:Connect(function(enterPressed)
 if enterPressed then 

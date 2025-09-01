@@ -18,5 +18,8 @@ local inputText2 = textbox2.Text
 if inputText == "ws" then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = inputText2
 end
+if inputText == "hh" then
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = inputText2
+end
 end
 end)

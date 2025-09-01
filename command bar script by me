@@ -1,67 +1,21 @@
 local screengui = Instance.new("ScreenGui")
 local textbox = Instance.new("TextBox")
+local textbox2 = Instance.new("TextBox")
 screengui.Parent = game.Players.LocalPlayer.PlayerGui
+textbox.name = "textbox"
 textbox.Parent = screengui
 textbox.Position = UDim2.new(0, 800 , 0, 8)
-textbox.Size = UDim2.new(0, 200 , 0, 50) 
+textbox.Size = UDim2.new(0, 200 , 0, 50)
+textbox2.Name = "textbox2"
+textbox2.Parent = screengui
+textbox2.Position = UDim2.new(0.481, 0,0.014, 0)
+textbox2.Size = UDim2.new(0, 200 , 0, 50)
 textbox.FocusLost:Connect(function(enterPressed)
 if enterPressed then 
 local inputText = textbox.Text
-if inputText == "wsct180" then
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 180
-end
-if inputText == "wsct16" then
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-end
-if inputText == "hhct50" then
-game.Players.LocalPlayer.Character.Humanoid.HipHeight = 50
-end
-if inputText == "hhct10" then
-game.Players.LocalPlayer.Character.Humanoid.HipHeight = 10
-end
-if inputText == "hhct0" then
-game.Players.LocalPlayer.Character.Humanoid.HipHeight = 0
-end
-if inputText == "hhct3" then
-game.Players.LocalPlayer.Character.Humanoid.HipHeight = 3
-end
-if inputText == "st" then
-game.Players.LocalPlayer.Character.Humanoid.Sit = true
-end
-if inputText == "cr" then
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-end
-if inputText == "j" then
-game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
-end
-if inputText == "ad" then
-game.Players.LocalPlayer.Character.Animate:Destroy()
-end
-if inputText == "sf" then
-game.Players.LocalPlayer.Character.Humanoid.Sit = false
-end
-if inputText == "art" then
-game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
-end
-if inputText == "arf" then
-game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
-end
-if inputText == "cd" then
-workspace.Camera:Destroy()
-end
-if inputText == "cf" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-end
-if inputText == "ucf" then
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-end
-if inputText == "awoo" then
-for _, a in pairs(workspace:GetChildren()) do
-print(a)
-end
-end
-if inputText == "hd" then
-game.Players.LocalPlayer.Character.Humanoid:Destroy()
+local inputText2 = textbox2.Text
+if inputText = "ws" then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = inputText2
 end
 end
 end)

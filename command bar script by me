@@ -33,5 +33,23 @@ end
 if inputText == "j" then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
+if inputText == "fd" then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
+end
+if inputText == "cf" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+end
+if inputText == "ucf" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end
+if inputText == "pfst" then
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+end
+if inputText == "pfsf" then
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+end
+if inputText == "cd" then
+workspace.Camera:Destroy()
+end
 end
 end)

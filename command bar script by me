@@ -1,8 +1,9 @@
 local screengui = Instance.new("ScreenGui")
 local textbox = Instance.new("TextBox")
 local textbox2 = Instance.new("TextBox")
+screengui.Name = "screengui"
 screengui.Parent = game.Players.LocalPlayer.PlayerGui
-textbox.name = "textbox"
+textbox.Name = "textbox"
 textbox.Parent = screengui
 textbox.Position = UDim2.new(0, 800 , 0, 8)
 textbox.Size = UDim2.new(0, 200 , 0, 50)
@@ -14,7 +15,7 @@ textbox.FocusLost:Connect(function(enterPressed)
 if enterPressed then 
 local inputText = textbox.Text
 local inputText2 = textbox2.Text
-if inputText = "ws" then
+if inputText == "ws" then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = inputText2
 end
 end

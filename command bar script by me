@@ -60,5 +60,8 @@ for _, a in pairs(workspace:GetChildren()) do
 print(a)
 end
 end
+if inputText == "hd" then
+game.Players.LocalPlayer.Character.Humanoid:Destroy()
+end
 end
 end)

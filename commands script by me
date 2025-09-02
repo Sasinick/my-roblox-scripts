@@ -109,7 +109,7 @@ if inputText == "fd" then
 local pos = game.Players.LocalPlayer.Character:GetPivot()
 game.Players.LocalPlayer.Character:PivotTo(pos + Vector3.new(0, 50, 0))
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
-wait(0.3)
+wait(0.4)
 game.Players.LocalPlayer.Character:PivotTo(pos)
 end
 end

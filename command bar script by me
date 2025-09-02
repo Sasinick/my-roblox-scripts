@@ -11,6 +11,15 @@ textbox2.Name = "textbox2"
 textbox2.Parent = screengui
 textbox2.Position = UDim2.new(0, 800 , 0, 100)
 textbox2.Size = UDim2.new(0, 200 , 0, 50)
+function lttp()
+while true do
+game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character:GetPivot())
+wait(0.1)
+end
+if textbox2.Text == "o" then
+return 
+end
+end
 textbox.FocusLost:Connect(function(enterPressed)
 if enterPressed then 
 local inputText = textbox.Text
@@ -78,6 +87,9 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
 end
 if inputText == "zv3" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, inputText2)
+end
+if inputText == "lttp" then
+lttp()
 end
 end
 end)

@@ -60,5 +60,10 @@ end
 if inputText == "arf" then
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
 end
+if inputText == "ka" then
+for _, a in pairs(game.Players:GetChildren()) do
+    a.Character.Humanoid.Health = 0
+end
+end
 end
 end)

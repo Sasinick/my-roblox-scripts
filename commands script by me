@@ -50,7 +50,7 @@ end
 if inputText == "j" then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
-if inputText == "fd" then
+if inputText == "fda" then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
 end
 if inputText == "cf" then

@@ -70,50 +70,6 @@ for _, a in pairs(workspace:GetChildren()) do
 print(a)
 end
 end
-if inputText == "99nitfltm" then
-workspace.Items.Log:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-if inputText == "99nitfsttm" then
-workspace.Map.Foliage["Small Tree"]:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-if inputText == "99nitfasttm" then
-for _, d in pairs(workspace.Map.Foliage:GetChildren()) do
-if d.Name == "Small Tree" then
-d:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-end
-if inputText == "99nitfaatm" then
-for _, d in pairs(workspace.Items:GetChildren()) do
-if d.name == "Apple" then
-d:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-end
-if inputText == "99nitfabtm" then
-for _, a in pairs(workspace.Characters:GetChildren()) do
-if a.Name == "Bunny" then
-a:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-end
-if inputText == "99nitfactm" then
-for _, d in pairs(workspace.Items:GetChildren()) do
-if d.name == "Carrot" then
-d:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-end
-if inputText == "99nitfaitm" then
-for _, a in pairs(workspace.Items:GetChildren()) do
-a:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-end
-if inputText == "99nitfaltm" then
-for _, a in pairs(workspace.Items:GetChildren()) do
-if a.Name == "Log" then
-a:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
-end
-end
-if inputText == "99nitfwinnnhsnowp" then
-for _, a in pairs(workspace.Items:GetChildren()) do
-print(a)
 end
 end
 end)

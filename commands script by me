@@ -28,84 +28,90 @@ end
 wait(0.1)
 end
 end
+local UserInputService = game.UserInputService
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+if input.KeyCode == Enum.KeyCode.R then
+textbox:CaptureFocus()
+end
+end)
 textbox.FocusLost:Connect(function(enterPressed)
 if enterPressed then 
 local inputText = textbox.Text
 local inputText2 = textbox2.Text
-if inputText == "ws" then
+if inputText == "rws" then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = inputText2
 end
-if inputText == "hh" then
+if inputText == "rhh" then
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = inputText2
 end
-if inputText == "ad" then
+if inputText == "rad" then
 game.Players.LocalPlayer.Character.Animate:Destroy()
 end
-if inputText == "cr" then
+if inputText == "rcr" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
-if inputText == "st" then
+if inputText == "rst" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
 end
-if inputText == "j" then
+if inputText == "rj" then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
-if inputText == "fda" then
+if inputText == "rfda" then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
 end
-if inputText == "cf" then
+if inputText == "rcf" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end
-if inputText == "ucf" then
+if inputText == "rucf" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end
-if inputText == "pfst" then
+if inputText == "rpfst" then
 game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
 end
-if inputText == "pfsf" then
+if inputText == "rpfsf" then
 game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
 end
-if inputText == "cd" then
+if inputText == "rcd" then
 workspace.Camera:Destroy()
 end
-if inputText == "tpl" then
+if inputText == "rtpl" then
 game.Players.LocalPlayer.Character:PivotTo(game.Players[inputText2].Character:GetPivot())
 end
-if inputText == "art" then
+if inputText == "rart" then
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
 end
-if inputText == "arf" then
+if inputText == "rarf" then
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
 end
-if inputText == "ka" then
+if inputText == "rka" then
 for _, a in pairs(game.Players:GetChildren()) do
     a.Character.Humanoid.Health = 0
 end
 end
-if inputText == "pawo" then
+if inputText == "rpawo" then
 for _, a in pairs(workspace:GetChildren()) do
 print(a)
 end
 end
-if inputText == "xv3" then
+if inputText == "rxv3" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(inputText2, 0, 0)
 end
-if inputText == "yv3" then
+if inputText == "ryv3" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, inputText2, 0)
 end
-if inputText == "zv3" then
+if inputText == "rzv3" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, inputText2)
 end
-if inputText == "lttp" then
+if inputText == "rlttp" then
 lttp()
 end
-if inputText == "ps" then
+if inputText == "rps" then
 print(game.Players.LocalPlayer.Character.Humanoid.Sit)
 end
-if inputText == "isj" then
+if inputText == "risj" then
 isj()
 end
-if inputText == "fd" then
+if inputText == "rfd" then
 local pos = game.Players.LocalPlayer.Character:GetPivot()
 game.Players.LocalPlayer.Character:PivotTo(pos + Vector3.new(0, 50, 0))
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')

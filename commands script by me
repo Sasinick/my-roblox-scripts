@@ -118,5 +118,11 @@ game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
 wait(0.4)
 game.Players.LocalPlayer.Character:PivotTo(pos)
 end
+if inputText == "raits" then
+local Player = game.Players.LocalPlayer.Name
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+a.Parent = workspace[Player]
+end
+end
 end
 end)

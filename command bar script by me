@@ -73,5 +73,8 @@ end
 if inputText == "y1a" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 1, 0)
 end
+if inputText == "yaoh" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, inputText2, 0)
+end
 end
 end)

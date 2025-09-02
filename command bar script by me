@@ -65,5 +65,10 @@ for _, a in pairs(game.Players:GetChildren()) do
     a.Character.Humanoid.Health = 0
 end
 end
+if inputText == "pawo" then
+for _, a in pairs(workspace:GetChildren()) do
+print(a)
+end
+end
 end
 end)

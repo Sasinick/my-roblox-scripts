@@ -5,12 +5,12 @@ screengui.Name = "screengui"
 screengui.Parent = game.Players.LocalPlayer.PlayerGui
 textbox.Name = "textbox"
 textbox.Parent = screengui
-textbox.Position = UDim2.new(0, 800 , 0, 300)
-textbox.Size = UDim2.new(0, 800 , 0, 200)
+textbox.Position = UDim2.new(0, 800 , 0, 250)
+textbox.Size = UDim2.new(0, 850 , 0, 150)
 textbox2.Name = "textbox2"
 textbox2.Parent = screengui
 textbox2.Position = UDim2.new(0, 800 , 0, 400)
-textbox2.Size = UDim2.new(0, 800 , 0, 200)
+textbox2.Size = UDim2.new(0, 450 , 0, 150)
 function lttp()
 while true do
 game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character:GetPivot())

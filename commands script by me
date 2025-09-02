@@ -123,6 +123,10 @@ local Player = game.Players.LocalPlayer.Name
 for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 a.Parent = workspace[Player]
 end
+if inputText == "rtad" then
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+a.Handle.Size = math.huge
+end
 end
 end
 end)

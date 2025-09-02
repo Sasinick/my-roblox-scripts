@@ -20,6 +20,14 @@ if textbox2.Text == "o" then
 return 
 end
 end
+function isj()
+while true do
+if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end
+wait(0.1)
+end
+end
 textbox.FocusLost:Connect(function(enterPressed)
 if enterPressed then 
 local inputText = textbox.Text
@@ -90,6 +98,12 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalP
 end
 if inputText == "lttp" then
 lttp()
+end
+if inputText == "ps" then
+print(game.Players.LocalPlayer.Character.Humanoid.Sit)
+end
+if inputText == "isj" then
+isj()
 end
 end
 end)

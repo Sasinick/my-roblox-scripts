@@ -70,5 +70,8 @@ for _, a in pairs(workspace:GetChildren()) do
 print(a)
 end
 end
+if inputText == "y1a" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 1, 0)
+end
 end
 end)

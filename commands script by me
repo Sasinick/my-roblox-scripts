@@ -253,5 +253,15 @@ for _, a in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
 a:Destroy()
 end
 end
+if inputText == ";ttuap" then
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+if a.Anchored == false then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end
+end
+end
 end
 end)

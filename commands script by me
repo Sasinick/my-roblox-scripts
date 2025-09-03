@@ -299,5 +299,12 @@ game.Players.LocalPlayer.Character.Humanoid.Sit = true
 wait(0.1)
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
+if inputText == ";fdad" then
+local pos = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character:PivotTo(pos + Vector3.new(0, 50, 0))
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
 end
 end)

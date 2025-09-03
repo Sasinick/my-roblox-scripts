@@ -294,5 +294,10 @@ game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character
 wait(1)
 game.Players.LocalPlayer.Character:PivotTo(s)
 end
+if inputText == ";sad" then
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
 end
 end)

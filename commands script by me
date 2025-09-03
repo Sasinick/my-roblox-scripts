@@ -227,5 +227,10 @@ game.Players.LocalPlayer.Character:PivotTo(game.Players.LocalPlayer.Character:Ge
 wait(0.1)
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
+if inputText == ";ttxv3apc" then
+if game.Players.LocalPlayer.Character:PivotTo(game.Players.LocalPlayer.Character:GetPivot() + Vector3.new(textbox2.Text, 0, 0))
+wait(0.1)
+print(game.Players.LocalPlayer.Character:GetPivot())
+end
 end
 end)

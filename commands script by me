@@ -143,7 +143,7 @@ a.Parent = workspace[Player]
 end
 end
 if inputText == ";dttm" then
-for _, a in pairs(workspace:GetChildren()) do
+for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Tool") then
 game.Players.LocalPlayer.Character:PivotTo(a:GetPivot())
 end

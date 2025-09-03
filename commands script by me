@@ -196,5 +196,11 @@ game.Players.LocalPlayer.Character:PivotTo(f.CFrame)
 end
 end
 end
+if inputText == ";ptaw1mpm" then
+local p = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character:GetPivot())
+wait(1)
+game.Players.LocalPlayer.Character:PivotTo(p)
+end
 end
 end)

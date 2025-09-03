@@ -4,16 +4,15 @@ local textbox = Instance.new("TextBox")
 local textbox2 = Instance.new("TextBox")
 screengui.Name = "screengui"
 screengui.Parent = game.Players.LocalPlayer.PlayerGui
+screengui.ResetOnSpawn = false
 textbox.Name = "textbox"
 textbox.Parent = screengui
 textbox.Position = UDim2.new(0, 800 , 0, 650)
 textbox.Size = UDim2.new(0, 850 , 0, 150)
-textbox.ResetOnSpawn = false
 textbox2.Name = "textbox2"
 textbox2.Parent = screengui
 textbox2.Position = UDim2.new(0, 800 , 0, 800)
 textbox2.Size = UDim2.new(0, 850 , 0, 150)
-textbox2.ResetOnSpawn = false
 function lttp()
 while true do
 game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character:GetPivot())

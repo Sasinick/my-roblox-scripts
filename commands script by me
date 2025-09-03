@@ -186,5 +186,8 @@ end
 if inputText == ";pcp" then
 print(game.Players[inputText2].Character:GetPivot())
 end
+if inputText == ";tsl" then
+game.Players.LocalPlayer.Character:PivotTo(workspace.SpawnLocation.CFrame)
+end
 end
 end)

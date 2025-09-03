@@ -248,5 +248,10 @@ game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character
 wait(0.1)
 print(game.Players.LocalPlayer.Character:GetPivot())
 end
+if inputText == ";gd" then
+for _, a in pairs(game.Players.LocalPlayer.PlayerGui:GetChildren()) do
+a:Destroy()
+end
+end
 end
 end)

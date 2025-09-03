@@ -186,8 +186,15 @@ end
 if inputText == ";pcp" then
 print(game.Players[inputText2].Character:GetPivot())
 end
-if inputText == ";tsl" then
+if inputText == ";ttsl" then
 game.Players.LocalPlayer.Character:PivotTo(workspace.SpawnLocation.CFrame)
+end
+if inputText == ";tts" then
+for _, f in pairs(workspace:GetDescendants()) do
+if f:IsA("Seat") then
+game.Players.LocalPlayer.Character:PivotTo(f.CFrame)
+end
+end
 end
 end
 end)

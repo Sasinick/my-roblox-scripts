@@ -278,6 +278,11 @@ if inputText == ";paitp" then
 for _, a in pairs(game.Players[textbox2.Text].Backpack:GetChildren()) do
 print(a)
 end
+for _, a in pairs(workspace[textbox2.Text]:GetChildren()) do
+if a:IsA("Tool") then
+print(a)
+end
+end
 end
 end
 end)

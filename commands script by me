@@ -63,7 +63,7 @@ end
 if inputText == "rad" then
 game.Players.LocalPlayer.Character.Animate:Destroy()
 end
-if inputText == "rcr" then
+if inputText == "rc" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
 if inputText == "rst" then
@@ -172,6 +172,15 @@ game.Players.LocalPlayer.Character:PivotTo(pos)
 end
 if inputText == "rlpmk" then
 lpmk()
+end
+if inputText == "rcoxv3" then
+game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(textbox2.Text, 0, 0)
+end
+if inputText == "rcoyv3" then
+game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(0, textbox2.Text, 0)
+end
+if inputText == "rcozv3" then
+game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(0, 0, textbox2.Text)
 end
 end
 end)

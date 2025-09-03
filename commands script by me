@@ -274,5 +274,10 @@ end
 end
 end
 end
+if inputText == ";paitp" then
+for _, a in pairs(game.Players[textbox2.Text].Backpack:GetChildren()) do
+print(a)
+end
+end
 end
 end)

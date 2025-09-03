@@ -322,5 +322,14 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end
 end
 end
+if inputText == ";ttslad" then
+for _, a in pairs(workspace:GetDescendants()) do
+if a.Name == "SpawnLocation" then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+end
+end
 end
 end)

@@ -242,5 +242,10 @@ game.Players.LocalPlayer.Character:PivotTo(game.Players.LocalPlayer.Character:Ge
 wait(0.1)
 print(game.Players.LocalPlayer.Character:GetPivot())
 end
+if inputText == ";ttpapc" then
+game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character:GetPivot())
+wait(0.1)
+print(game.Players.LocalPlayer.Character:GetPivot())
+end
 end
 end)

@@ -284,5 +284,15 @@ print(a)
 end
 end
 end
+if inputText == ";tsatpaw1mbt" then
+local d = game.Players.LocalPlayer.Name
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+a.Parent = workspace[d]
+end
+local s = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character:GetPivot())
+wait(1)
+game.Players.LocalPlayer.Character:PivotTo(s)
+end
 end
 end)

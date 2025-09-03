@@ -355,5 +355,14 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 wait(0.1)
 game.Players.LocalPlayer.Character:PivotTo(game.Players.LocalPlayer.Character:GetPivot() + Vector3.new(0, 0, textbox2.Text))
 end
+if inputText == ";ttsaj" then
+for _, f in pairs(workspace:GetDescendants()) do
+if f:IsA("Seat") then
+game.Players.LocalPlayer.Character:PivotTo(f.CFrame)
+end
+end
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end
 end
 end)

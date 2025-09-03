@@ -262,5 +262,8 @@ end
 end
 end
 end
+if inputText == ";sgd" then
+game.Players.LocalPlayer.PlayerGui.screengui:Destroy()
+end
 end
 end)

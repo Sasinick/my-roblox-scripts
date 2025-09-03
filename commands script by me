@@ -202,5 +202,30 @@ game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character
 wait(1)
 game.Players.LocalPlayer.Character:PivotTo(p)
 end
+if inputText == ";jad" then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+if inputText == ";tpad" then
+game.Players.LocalPlayer.Character:PivotTo(game.Players[textbox2.Text].Character:GetPivot())
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+if inputText == ";xvad" then
+game.Players.LocalPlayer.Character:PivotTo(game.Players.LocalPlayer.Character:GetPivot() + Vector3.new(textbox2.Text, 0, 0))
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+if inputText == ";yvad" then
+game.Players.LocalPlayer.Character:PivotTo(game.Players.LocalPlayer.Character:GetPivot() + Vector3.new(0, textbox2.Text, 0))
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+if inputText == ";zvad" then
+game.Players.LocalPlayer.Character:PivotTo(game.Players.LocalPlayer.Character:GetPivot() + Vector3.new(0, 0, textbox2.Text))
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
 end
 end)

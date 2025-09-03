@@ -265,5 +265,14 @@ end
 if inputText == ";sgd" then
 game.Players.LocalPlayer.PlayerGui.screengui:Destroy()
 end
+if inputText == ";pauap" then
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+if a.Anchored == false then
+print(a)
+end
+end
+end
+end
 end
 end)

@@ -1,0 +1,11 @@
+for _, a in pairs(workspace.Map.BaseGround:GetDescendants()) do
+if a:IsA("Part") then
+a.CanCollide = false
+end
+end
+wait(0.5)
+for _, a in pairs(workspace.Map.BaseGround:GetDescendants()) do
+if a:IsA("Part") then
+a.CanCollide = true
+end
+end

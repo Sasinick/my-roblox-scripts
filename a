@@ -1,0 +1,5 @@
+local d = game.Players.LocalPlayer.Character:GetPivot()
+while true do
+game.Players.LocalPlayer.Character:PivotTo(d + Vector3.new(0, 100, 0))
+wait(0.1)
+end

@@ -1,0 +1,5 @@
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.Transparency = 0
+end
+end

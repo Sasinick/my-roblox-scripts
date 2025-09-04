@@ -1,7 +1,6 @@
 local part = Instance.new("Part")
 part.Name = "isdjif"
 part.Anchored = true
-part.Transparency = 1
 part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
 part.Parent = workspace
 while true do

@@ -1,0 +1,7 @@
+game.Players.PlayerAdded:Connect(function(player)
+for _, a in pairs(workspace:GetDescendants()) do
+if a.Name == "SpawnLocation" then
+    game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end)

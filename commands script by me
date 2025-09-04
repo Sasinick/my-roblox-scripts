@@ -31,5 +31,16 @@ fire.Heat = 20
 fire.Size = 10
 fire.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
 end
+if inputText == ";flm" then
+local part = Instance.new("Part")
+part.Name = "isdjif"
+part.Anchored = true
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+part.Parent = workspace
+while true do
+workspace.isdjif.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+wait(0.1)
+end
+end
 end
 end)

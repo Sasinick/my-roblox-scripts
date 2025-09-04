@@ -1,0 +1,4 @@
+local part = Instance.new("Part")
+part.Anchored = false
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+part.Parent = workspace

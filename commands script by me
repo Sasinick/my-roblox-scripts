@@ -364,5 +364,8 @@ end
 wait(0.1)
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
+if inputText == ";p" then
+print(textbox2.Text)
+end
 end
 end)

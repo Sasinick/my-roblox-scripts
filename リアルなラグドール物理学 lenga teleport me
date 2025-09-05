@@ -1,0 +1,6 @@
+local d = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character:PivotTo(workspace.TemporalInstances.DestructibleWallModel:GetPivot())
+wait(0.3)
+workspace.TemporalInstances.DestructibleWallModel:PivotTo(d)
+wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(d)

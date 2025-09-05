@@ -91,3 +91,13 @@ wait(0.1)
 end
 end)
 tool11.Parent = game.Players.LocalPlayer.Backpack
+local tool12 = Instance.new("Tool")
+tool12.RequiresHandle = false
+tool12.Name = "fire me"
+tool12.Activated:connect(function()
+local fire = Instance.new("Fire")
+fire.Heat = 40
+fire.Size = 20
+fire.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+end)
+tool12.Parent = game.Players.LocalPlayer.Backpack

@@ -1,0 +1,4 @@
+local d = game.Players.LocalPlayer.Name
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+a.Parent = workspace[d]
+end

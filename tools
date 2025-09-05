@@ -40,3 +40,14 @@ tool6.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
 end)
 tool6.Parent = game.Players.LocalPlayer.Backpack
+local tool7 = Instance.new("Tool")
+tool7.RequiresHandle = false
+tool7.Name = "all part transparency = 0"
+tool7.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.Transparency = 0
+end
+end
+end)
+tool7.Parent = game.Players.LocalPlayer.Backpack

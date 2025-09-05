@@ -12,3 +12,10 @@ tool2.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
 end)
 tool2.Parent = game.Players.LocalPlayer.Backpack  
+local tool3 = Instance.new("Tool")
+tool3.RequiresHandle = false
+tool3.Name = "autorotate = true"
+tool3.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+end)
+tool3.Parent = game.Players.LocalPlayer.Backpack

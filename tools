@@ -11,4 +11,4 @@ tool2.Name = "autorotate = false"
 tool2.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
 end)
-tool2.Parent = game.Players.LocalPlayer.Backpack
+tool2.Parent = game.Players.LocalPlayer.Backpack  

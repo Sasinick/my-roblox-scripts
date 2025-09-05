@@ -33,3 +33,10 @@ tool5.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end)
 tool5.Parent = game.Players.LocalPlayer.Backpack
+local tool6 = Instance.new("Tool")
+tool6.RequiresHandle = false
+tool6.Name = "fallingdown"
+tool6.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('FallingDown')
+end)
+tool6.Parent = game.Players.LocalPlayer.Backpack

@@ -76,3 +76,18 @@ tool10.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
 tool10.Parent = game.Players.LocalPlayer.Backpack
+local tool11 = Instance.new("Tool")
+tool11.RequiresHandle = false
+tool11.Name = "fly"
+tool11.Activated:connect(function()
+local part = Instance.new("Part")
+part.Name = "isdjif"
+part.Anchored = true
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+part.Parent = workspace
+while true do
+workspace.isdjif.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
+wait(0.1)
+end
+end)
+tool11.Parent = game.Players.LocalPlayer.Backpack

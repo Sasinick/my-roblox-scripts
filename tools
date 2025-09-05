@@ -19,3 +19,10 @@ tool3.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
 end)
 tool3.Parent = game.Players.LocalPlayer.Backpack
+local tool4 = Instance.new("Tool")
+tool4.RequiresHandle = false
+tool4.Name = "jump"
+tool4.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end)
+tool4.Parent = game.Players.LocalPlayer.Backpack

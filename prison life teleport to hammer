@@ -1,1 +1,0 @@
-game.Players.LocalPlayer.Character:PivotTo(workspace.Prison_ITEMS.single.Hammer:GetPivot())

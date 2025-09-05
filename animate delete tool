@@ -1,0 +1,7 @@
+local tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "animate delete"
+tool.Activated:connect(function()
+game.Players.LocalPlayer.Character.Animate:Destroy()
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack

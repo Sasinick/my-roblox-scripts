@@ -1,0 +1,4 @@
+local d = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character:PivotTo(workspace.Prison_ITEMS.single["Crude Knife"]:GetPivot())
+wait(0.9)
+game.Players.LocalPlayer.Character:PivotTo(d)

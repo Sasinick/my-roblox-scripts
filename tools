@@ -21,15 +21,8 @@ end)
 tool3.Parent = game.Players.LocalPlayer.Backpack
 local tool4 = Instance.new("Tool")
 tool4.RequiresHandle = false
-tool4.Name = "jump"
+tool4.Name = "die"
 tool4.Activated:connect(function()
-game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 tool4.Parent = game.Players.LocalPlayer.Backpack
-local tool5 = Instance.new("Tool")
-tool5.RequiresHandle = false
-tool5.Name = "sit"
-tool5.Activated:connect(function()
-game.Players.LocalPlayer.Character.Humanoid.Sit = true
-end)
-tool5.Parent = game.Players.LocalPlayer.Backpack

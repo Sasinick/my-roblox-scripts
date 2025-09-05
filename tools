@@ -1,7 +1,14 @@
-local tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Name = "animate delete"
-tool.Activated:connect(function()
+local tool1 = Instance.new("Tool")
+tool1.RequiresHandle = false
+tool1.Name = "animate delete"
+tool1.Activated:connect(function()
 game.Players.LocalPlayer.Character.Animate:Destroy()
 end)
-tool.Parent = game.Players.LocalPlayer.Backpack
+tool1.Parent = game.Players.LocalPlayer.Backpack
+local tool2 = Instance.new("Tool")
+tool2.RequiresHandle = false
+tool2.Name = "autorotate = false"
+tool2.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
+end)
+tool2.Parent = game.Players.LocalPlayer.Backpack

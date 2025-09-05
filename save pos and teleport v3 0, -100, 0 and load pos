@@ -1,0 +1,6 @@
+local d = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -100, 0)
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(d)

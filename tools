@@ -101,3 +101,10 @@ fire.Size = 20
 fire.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
 end)
 tool12.Parent = game.Players.LocalPlayer.Backpack
+local tool13 = Instance.new("Tool")
+tool13.RequiresHandle = false
+tool13.Name = "print my character cframe"
+tool13.Activated:connect(function()
+print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+end)
+tool13.Parent = game.Players.LocalPlayer.Backpack

@@ -1,0 +1,8 @@
+while true do
+game.Players.LocalPlayer.Character:PivotTo(workspace.Part2.CFrame)
+wait(0.3)
+game.Players.LocalPlayer.Character:PivotTo(workspace.Part2.CFrame)
+wait(0.3)
+workspace.Part2.CFrame = game.Players.beekon1043.Character:GetPivot()
+wait(0.1)
+end

@@ -1,8 +1,8 @@
 local d = game.Players.LocalPlayer.Character:GetPivot()
-game.Players.LocalPlayer.Character:PivotTo(workspace.Part.CFrame)
+game.Players.LocalPlayer.Character:PivotTo(workspace.Part2.CFrame)
+wait(0.3)
+game.Players.LocalPlayer.Character:PivotTo(workspace.Part2.CFrame)
 wait(0.2)
-game.Players.LocalPlayer.Character:PivotTo(workspace.Part.CFrame)
-wait(0.2)
-workspace.Part.CFrame = d
+workspace.Part2.CFrame = d
 wait(0.1)
 game.Players.LocalPlayer.Character:PivotTo(d)

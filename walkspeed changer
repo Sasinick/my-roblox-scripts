@@ -9,14 +9,13 @@
 designed using localmaze gui creator
 ]=]
 
--- Instances: 6 | Scripts: 1 | Modules: 0 | Tags: 1
+-- Instances: 7 | Scripts: 1 | Modules: 0 | Tags: 1
 local CollectionService = game:GetService("CollectionService");
 local G2L = {};
 
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui
 G2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
-G2L["ScreenGui_1"]["ResetOnSpawn"] = false;
 
 -- Tags
 CollectionService:AddTag(G2L["ScreenGui_1"], [[main]]);
@@ -25,50 +24,55 @@ CollectionService:AddTag(G2L["ScreenGui_1"], [[main]]);
 G2L["Frame_2"] = Instance.new("Frame", G2L["ScreenGui_1"]);
 G2L["Frame_2"]["BorderSizePixel"] = 0;
 G2L["Frame_2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["Frame_2"]["Size"] = UDim2.new(0.08229, 0, 0.14721, 0);
-G2L["Frame_2"]["Position"] = UDim2.new(0.09583, 0, 0.31546, 0);
+G2L["Frame_2"]["Size"] = UDim2.new(0.10312, 0, 0.15142, 0);
+G2L["Frame_2"]["Position"] = UDim2.new(0.11563, 0, 0.16824, 0);
+
+
+-- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.LocalScript
+G2L["LocalScript_3"] = Instance.new("LocalScript", G2L["Frame_2"]);
+
 
 
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.TextLabel
-G2L["TextLabel_3"] = Instance.new("TextLabel", G2L["Frame_2"]);
-G2L["TextLabel_3"]["BorderSizePixel"] = 0;
-G2L["TextLabel_3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["TextLabel_3"]["Size"] = UDim2.new(0.92405, 0, 0.3, 0);
-G2L["TextLabel_3"]["Text"] = [[walkspeed changer]];
+G2L["TextLabel_4"] = Instance.new("TextLabel", G2L["Frame_2"]);
+G2L["TextLabel_4"]["BorderSizePixel"] = 0;
+G2L["TextLabel_4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["TextLabel_4"]["Size"] = UDim2.new(1, 0, 0.29167, 0);
+G2L["TextLabel_4"]["Text"] = [[walkspeed changer]];
 
 
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.TextButton
-G2L["TextButton_4"] = Instance.new("TextButton", G2L["Frame_2"]);
-G2L["TextButton_4"]["BorderSizePixel"] = 0;
-G2L["TextButton_4"]["BackgroundColor3"] = Color3.fromRGB(56, 203, 98);
-G2L["TextButton_4"]["Size"] = UDim2.new(0.78481, 0, 0.18571, 0);
-G2L["TextButton_4"]["Text"] = [[walkspeed change]];
-G2L["TextButton_4"]["Position"] = UDim2.new(0.02532, 0, 0.25714, 0);
+G2L["TextButton_5"] = Instance.new("TextButton", G2L["Frame_2"]);
+G2L["TextButton_5"]["BorderSizePixel"] = 0;
+G2L["TextButton_5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["TextButton_5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["TextButton_5"]["Size"] = UDim2.new(0.91919, 0, 0.27778, 0);
+G2L["TextButton_5"]["Text"] = [[walkspeed change]];
+G2L["TextButton_5"]["Position"] = UDim2.new(0.0202, 0, 0.22222, 0);
 
 
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.TextBox
-G2L["TextBox_5"] = Instance.new("TextBox", G2L["Frame_2"]);
-G2L["TextBox_5"]["CursorPosition"] = -1;
-G2L["TextBox_5"]["BorderSizePixel"] = 0;
-G2L["TextBox_5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["TextBox_5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["TextBox_5"]["Size"] = UDim2.new(0.92405, 0, 0.47143, 0);
-G2L["TextBox_5"]["Position"] = UDim2.new(0, 0, 0.45714, 0);
-G2L["TextBox_5"]["Text"] = [[walkspeed value]];
+G2L["TextBox_6"] = Instance.new("TextBox", G2L["Frame_2"]);
+G2L["TextBox_6"]["CursorPosition"] = -1;
+G2L["TextBox_6"]["BorderSizePixel"] = 0;
+G2L["TextBox_6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["TextBox_6"]["Size"] = UDim2.new(0.91919, 0, 0.375, 0);
+G2L["TextBox_6"]["Position"] = UDim2.new(0.0404, 0, 0.5, 0);
+G2L["TextBox_6"]["Text"] = [[walkspeed value]];
+
+
+-- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.UIDragDetector
+G2L["UIDragDetector_7"] = Instance.new("UIDragDetector", G2L["Frame_2"]);
+
 
 
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.LocalScript
-G2L["LocalScript_6"] = Instance.new("LocalScript", G2L["Frame_2"]);
-
-
-
--- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.LocalScript
-local function C_6()
-	local script = G2L["LocalScript_6"];
+local function C_3()
+	local script = G2L["LocalScript_3"];
 	script.Parent.TextButton.MouseButton1Click:Connect(function()	
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = script.Parent.TextBox.Text	
 	end)	
 end;
-task.spawn(C_6);
+task.spawn(C_3);
 
 return G2L["ScreenGui_1"], require;

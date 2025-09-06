@@ -239,3 +239,14 @@ tool29.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Freefall')
 end)
 tool29.Parent = game.Players.LocalPlayer.Backpack
+local tool30 = Instance.new("Tool")
+tool30.RequiresHandle = false
+tool30.Name = "xray"
+tool30.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.Reflectance = 0.5
+end
+end
+end)
+tool30.Parent = game.Players.LocalPlayer.Backpack

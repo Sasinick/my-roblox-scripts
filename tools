@@ -1,3 +1,4 @@
+local value = 0
 local tool1 = Instance.new("Tool")
 tool1.RequiresHandle = false
 tool1.Name = "animate delete"
@@ -119,3 +120,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/memeenjoyer43/darkdex
 --credits to LorekeeperZinnia 
 end)
 tool14.Parent = game.Players.LocalPlayer.Backpack
+local tool15 = Instance.new("Tool")
+tool15.RequiresHandle = false
+tool15.Name = "value = value + 1"
+tool15.Activated:connect(function()
+value = value + 1
+end)
+tool15.Parent = game.Players.LocalPlayer.Backpack

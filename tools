@@ -198,3 +198,12 @@ end
 end
 end)
 tool24.Parent = game.Players.LocalPlayer.Backpack
+local tool25 = Instance.new("Tool")
+tool25.RequiresHandle = false
+tool25.Name = "kill all"
+tool25.Activated:connect(function()
+for _, a in pairs(game.Players:GetChildren()) do
+    a.Character.Humanoid.Health = 0
+end
+end)
+tool25.Parent = game.Players.LocalPlayer.Backpack

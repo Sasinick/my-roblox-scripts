@@ -215,3 +215,11 @@ value = value + 1
 print(value)
 end)
 tool26.Parent = game.Players.LocalPlayer.Backpack
+local tool27 = Instance.new("Tool")
+tool27.RequiresHandle = false
+tool27.Name = "value = value - 1 and print value"
+tool27.Activated:connect(function()
+value = value - 1
+print(value)
+end)
+tool27.Parent = game.Players.LocalPlayer.Backpack

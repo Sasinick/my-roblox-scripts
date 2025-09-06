@@ -134,3 +134,10 @@ tool16.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 end)
 tool16.Parent = game.Players.LocalPlayer.Backpack
+local tool17 = Instance.new("Tool")
+tool17.RequiresHandle = false
+tool17.Name = "value = value - 1"
+tool17.Activated:connect(function()
+value = value - 1
+end)
+tool17.Parent = game.Players.LocalPlayer.Backpack

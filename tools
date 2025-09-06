@@ -250,3 +250,10 @@ end
 end
 end)
 tool30.Parent = game.Players.LocalPlayer.Backpack
+local tool31 = Instance.new("Tool")
+tool31.RequiresHandle = false
+tool31.Name = "fov"
+tool31.Activated:connect(function()
+workspace.Camera.FieldOfView = value
+end)
+tool31.Parent = game.Players.LocalPlayer.Backpack

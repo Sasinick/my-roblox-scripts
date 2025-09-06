@@ -89,3 +89,13 @@ part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 part.Parent = workspace
 end)
 tool9.Parent = game.Players.LocalPlayer.Backpack
+local tool10 = Instance.new("Tool")
+tool10.RequiresHandle = false
+tool10.Name = "anchored = true part spawn"
+tool10.Activated:connect(function()
+local part = Instance.new("Part")
+part.Anchored = true
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+part.Parent = workspace
+end)
+tool10.Parent = game.Players.LocalPlayer.Backpack

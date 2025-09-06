@@ -26,3 +26,12 @@ a:Destroy()
 end
 end)
 tool3.Parent = game.Players.LocalPlayer.Backpack
+local tool4 = Instance.new("Tool")
+tool4.RequiresHandle = false
+tool4.Name = "hint aaaaa"
+tool4.Activated:connect(function()
+local hint = Instance.new("Hint")
+hint.Parent = workspace
+hint.Text = "aaaaa"
+end)
+tool4.Parent = game.Players.LocalPlayer.Backpack

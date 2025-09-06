@@ -68,3 +68,14 @@ end
 end
 end)
 tool7.Parent = game.Players.LocalPlayer.Backpack
+local tool8 = Instance.new("Tool")
+tool8.RequiresHandle = false
+tool8.Name = "all part remove"
+tool8.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a:Destroy()
+end
+end
+end)
+tool8.Parent = game.Players.LocalPlayer.Backpack

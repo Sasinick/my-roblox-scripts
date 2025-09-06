@@ -46,3 +46,14 @@ end
 end
 end)
 tool5.Parent = game.Players.LocalPlayer.Backpack
+local tool6 = Instance.new("Tool")
+tool6.RequiresHandle = false
+tool6.Name = "all part cancollide = true"
+tool6.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.CanCollide = true
+end
+end
+end)
+tool6.Parent = game.Players.LocalPlayer.Backpack

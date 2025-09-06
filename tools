@@ -176,3 +176,14 @@ tool22.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, value)
 end)
 tool22.Parent = game.Players.LocalPlayer.Backpack
+local tool23 = Instance.new("Tool")
+tool23.RequiresHandle = false
+tool23.Name = "all part cancollide = false"
+tool23.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.CanCollide = false
+end
+end
+end)
+tool23.Parent = game.Players.LocalPlayer.Backpack

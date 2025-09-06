@@ -245,7 +245,7 @@ tool30.Name = "xray"
 tool30.Activated:connect(function()
 for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Part") then
-a.Reflectance = 0.5
+a.Transparency = 0.5
 end
 end
 end)

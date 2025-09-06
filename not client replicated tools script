@@ -8,3 +8,12 @@ fire.Size = 20
 fire.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
 end)
 tool1.Parent = game.Players.LocalPlayer.Backpack
+local tool2 = Instance.new("Tool")
+tool2.RequiresHandle = false
+tool2.Name = "kill all player"
+tool2.Activated:connect(function()
+for _, a in pairs(game.Players:GetChildren()) do
+    a.Character.Humanoid.Health = 0
+end
+end)
+tool2.Parent = game.Players.LocalPlayer.Backpack

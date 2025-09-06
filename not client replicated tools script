@@ -57,3 +57,14 @@ end
 end
 end)
 tool6.Parent = game.Players.LocalPlayer.Backpack
+local tool7 = Instance.new("Tool")
+tool7.RequiresHandle = false
+tool7.Name = "all part anchored = false"
+tool7.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.Anchored = false
+end
+end
+end)
+tool7.Parent = game.Players.LocalPlayer.Backpack

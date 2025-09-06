@@ -35,3 +35,14 @@ hint.Parent = workspace
 hint.Text = "aaaaa"
 end)
 tool4.Parent = game.Players.LocalPlayer.Backpack
+local tool5 = Instance.new("Tool")
+tool5.RequiresHandle = false
+tool5.Name = "all part cancollide = false"
+tool5.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.CanCollide = false
+end
+end
+end)
+tool5.Parent = game.Players.LocalPlayer.Backpack

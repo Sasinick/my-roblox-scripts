@@ -286,3 +286,16 @@ end
 end
 end)
 tool34.Parent = game.Players.LocalPlayer.Backpack
+local tool35 = Instance.new("Tool")
+tool35.RequiresHandle = false
+tool35.Name = "teleport to random unanchored part"
+tool35.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+if a.Anchored == false then
+game.Palyers.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end
+end)
+tool35.Parent = game.Players.LocalPlayer.Backpack

@@ -17,3 +17,12 @@ for _, a in pairs(game.Players:GetChildren()) do
 end
 end)
 tool2.Parent = game.Players.LocalPlayer.Backpack
+local tool3 = Instance.new("Tool")
+tool3.RequiresHandle = false
+tool3.Name = "kick all player"
+tool3.Activated:connect(function()
+for _, a in pairs(game.Players:GetChildren()) do
+a:Destroy()
+end
+end)
+tool3.Parent = game.Players.LocalPlayer.Backpack

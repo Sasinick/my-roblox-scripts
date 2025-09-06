@@ -1,1 +1,10 @@
-
+local tool1 = Instance.new("Tool")
+tool1.RequiresHandle = false
+tool1.Name = "fire me"
+tool1.Activated:connect(function()
+local fire = Instance.new("Fire")
+fire.Heat = 40
+fire.Size = 20
+fire.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+end)
+tool1.Parent = game.Players.LocalPlayer.Backpack

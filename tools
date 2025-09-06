@@ -148,3 +148,10 @@ tool18.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
 end)
 tool18.Parent = game.Players.LocalPlayer.Backpack
+local tool19 = Instance.new("Tool")
+tool19.RequiresHandle = false
+tool19.Name = "print value"
+tool19.Activated:connect(function()
+print(value)
+end)
+tool19.Parent = game.Players.LocalPlayer.Backpack

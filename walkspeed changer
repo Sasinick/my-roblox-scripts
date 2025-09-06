@@ -72,3 +72,4 @@ end;
 task.spawn(C_6);
 
 return G2L["ScreenGui_1"], require;
+game.Players.LocalPlayer.PlayerGui.Frame.Draggable = true

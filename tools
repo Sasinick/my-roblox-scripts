@@ -155,3 +155,10 @@ tool19.Activated:connect(function()
 print(value)
 end)
 tool19.Parent = game.Players.LocalPlayer.Backpack
+local tool20 = Instance.new("Tool")
+tool20.RequiresHandle = false
+tool20.Name = "x vector3 teleport"
+tool20.Activated:connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(value, 0, 0)
+end)
+tool20.Parent = game.Players.LocalPlayer.Backpack

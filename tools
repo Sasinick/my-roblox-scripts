@@ -275,3 +275,14 @@ end
 end
 end)
 tool33.Parent = game.Players.LocalPlayer.Backpack
+local tool34 = Instance.new("Tool")
+tool34.RequiresHandle = false
+tool34.Name = "teleport to random part"
+tool34.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end)
+tool34.Parent = game.Players.LocalPlayer.Backpack

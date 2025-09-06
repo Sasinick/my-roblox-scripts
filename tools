@@ -232,3 +232,10 @@ wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end)
 tool28.Parent = game.Players.LocalPlayer.Backpack
+local tool29 = Instance.new("Tool")
+tool29.RequiresHandle = false
+tool29.Name = "freefall"
+tool29.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Freefall')
+end)
+tool29.Parent = game.Players.LocalPlayer.Backpack

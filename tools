@@ -207,3 +207,11 @@ for _, a in pairs(game.Players:GetChildren()) do
 end
 end)
 tool25.Parent = game.Players.LocalPlayer.Backpack
+local tool26 = Instance.new("Tool")
+tool26.RequiresHandle = false
+tool26.Name = "value = value + 1 and print value"
+tool26.Activated:connect(function()
+value = value + 1
+print(value)
+end)
+tool26.Parent = game.Players.LocalPlayer.Backpack

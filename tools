@@ -264,3 +264,14 @@ tool32.Activated:connect(function()
 print(tick())
 end)
 tool32.Parent = game.Players.LocalPlayer.Backpack
+local tool33 = Instance.new("Tool")
+tool33.RequiresHandle = false
+tool33.Name = "teleport to seat"
+tool33.Activated:connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Seat") then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end)
+tool33.Parent = game.Players.LocalPlayer.Backpack

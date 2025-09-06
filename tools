@@ -223,3 +223,12 @@ value = value - 1
 print(value)
 end)
 tool27.Parent = game.Players.LocalPlayer.Backpack
+local tool28 = Instance.new("Tool")
+tool28.RequiresHandle = false
+tool28.Name = "jump and character freeze"
+tool28.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+end)
+tool28.Parent = game.Players.LocalPlayer.Backpack

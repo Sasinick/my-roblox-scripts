@@ -1,0 +1,4 @@
+local function onPartTouched(object)
+print(object:GetFullName())
+end
+game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(onPartTouched)

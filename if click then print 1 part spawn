@@ -1,0 +1,9 @@
+local part = Instance.new("Part")
+part.Anchored = true
+part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+part.Parent = workspace
+local a = Instance.new("ClickDetector")
+a.Parent = part
+a.MouseClick:Connect(function()
+print(1)
+end)

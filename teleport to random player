@@ -1,0 +1,3 @@
+for _, a in pairs(game.Players:GetChildren()) do
+game.Players.LocalPlayer.Character:PivotTo(a.Character:GetPivot())
+end

@@ -1,0 +1,1 @@
+local bodyVelocity = Instance.new("BodyVelocity") bodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge) bodyVelocity.Velocity = Vector3.new(0, 0, 0) bodyVelocity.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart

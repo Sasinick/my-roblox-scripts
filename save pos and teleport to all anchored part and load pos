@@ -1,0 +1,10 @@
+local d = game.Players.LocalPlayer.Character:GetPivot()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+if a.Anchored == true then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(d)
+end
+end
+end

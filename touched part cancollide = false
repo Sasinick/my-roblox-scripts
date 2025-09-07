@@ -1,0 +1,4 @@
+local function onPartTouched(object)
+print(object.CanCollide = false)
+end
+game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(onPartTouched)

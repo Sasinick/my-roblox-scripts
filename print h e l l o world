@@ -1,0 +1,6 @@
+local helloArray = {"h", "e", "l", "l", "o"}
+local worldArray = {"w", "o", "r", "l", "d"}
+for index, value in helloArray do
+print(value)
+end
+print(table.concat(worldArray))

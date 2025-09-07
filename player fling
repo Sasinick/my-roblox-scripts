@@ -7,7 +7,11 @@ part.Transparency = 1
 game.Players.LocalPlayer.Character:PivotTo(part.CFrame + Vector3.new(0, 10, 0))
 wait(0.1)
 local bodyVelocity = Instance.new("BodyVelocity") bodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge) bodyVelocity.Velocity = Vector3.new(0, -500, 0) bodyVelocity.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-wait(1)
+wait(2)
+part.CFrame = game.Players[d].Character.HumanoidRootPart.CFrame + Vector3.new(0, 3, 0)
+wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(part.CFrame + Vector3.new(0, 10, 0))
+wait(0.1)
 part:Destroy()
 wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity:Destroy()

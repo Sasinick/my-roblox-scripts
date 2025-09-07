@@ -16,6 +16,7 @@ local G2L = {};
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui
 G2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+G2L["ScreenGui_1"]["ResetOnSpawn"] = false;
 
 -- Tags
 CollectionService:AddTag(G2L["ScreenGui_1"], [[main]]);
@@ -24,8 +25,8 @@ CollectionService:AddTag(G2L["ScreenGui_1"], [[main]]);
 G2L["Frame_2"] = Instance.new("Frame", G2L["ScreenGui_1"]);
 G2L["Frame_2"]["BorderSizePixel"] = 0;
 G2L["Frame_2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["Frame_2"]["Size"] = UDim2.new(0.10312, 0, 0.15142, 0);
-G2L["Frame_2"]["Position"] = UDim2.new(0.11563, 0, 0.16824, 0);
+G2L["Frame_2"]["Size"] = UDim2.new(0.06979, 0, 0.17876, 0);
+G2L["Frame_2"]["Position"] = UDim2.new(0.19583, 0, 0.37014, 0);
 
 
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.LocalScript
@@ -37,28 +38,28 @@ G2L["LocalScript_3"] = Instance.new("LocalScript", G2L["Frame_2"]);
 G2L["TextLabel_4"] = Instance.new("TextLabel", G2L["Frame_2"]);
 G2L["TextLabel_4"]["BorderSizePixel"] = 0;
 G2L["TextLabel_4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["TextLabel_4"]["Size"] = UDim2.new(1, 0, 0.29167, 0);
+G2L["TextLabel_4"]["Size"] = UDim2.new(1.01493, 0, 0.24706, 0);
 G2L["TextLabel_4"]["Text"] = [[walkspeed changer]];
 
 
--- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.TextButton
-G2L["TextButton_5"] = Instance.new("TextButton", G2L["Frame_2"]);
-G2L["TextButton_5"]["BorderSizePixel"] = 0;
-G2L["TextButton_5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["TextButton_5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["TextButton_5"]["Size"] = UDim2.new(0.91919, 0, 0.27778, 0);
-G2L["TextButton_5"]["Text"] = [[walkspeed change]];
-G2L["TextButton_5"]["Position"] = UDim2.new(0.0202, 0, 0.22222, 0);
-
-
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.TextBox
-G2L["TextBox_6"] = Instance.new("TextBox", G2L["Frame_2"]);
-G2L["TextBox_6"]["CursorPosition"] = -1;
-G2L["TextBox_6"]["BorderSizePixel"] = 0;
-G2L["TextBox_6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["TextBox_6"]["Size"] = UDim2.new(0.91919, 0, 0.375, 0);
-G2L["TextBox_6"]["Position"] = UDim2.new(0.0404, 0, 0.5, 0);
-G2L["TextBox_6"]["Text"] = [[walkspeed value]];
+G2L["TextBox_5"] = Instance.new("TextBox", G2L["Frame_2"]);
+G2L["TextBox_5"]["CursorPosition"] = -1;
+G2L["TextBox_5"]["BorderSizePixel"] = 0;
+G2L["TextBox_5"]["BackgroundColor3"] = Color3.fromRGB(50, 255, 106);
+G2L["TextBox_5"]["Size"] = UDim2.new(0.95522, 0, 0.25882, 0);
+G2L["TextBox_5"]["Position"] = UDim2.new(0.01493, 0, 0.17647, 0);
+G2L["TextBox_5"]["Text"] = [[walkspeed value]];
+
+
+-- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.TextButton
+G2L["TextButton_6"] = Instance.new("TextButton", G2L["Frame_2"]);
+G2L["TextButton_6"]["BorderSizePixel"] = 0;
+G2L["TextButton_6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["TextButton_6"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["TextButton_6"]["Size"] = UDim2.new(0.97015, 0, 0.27059, 0);
+G2L["TextButton_6"]["Text"] = [[walkspeed change]];
+G2L["TextButton_6"]["Position"] = UDim2.new(0.01493, 0, 0.44706, 0);
 
 
 -- Players.afisifhsh348rhfsd.PlayerGui.ScreenGui.Frame.UIDragDetector

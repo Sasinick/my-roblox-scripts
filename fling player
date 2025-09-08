@@ -2,9 +2,9 @@ while true do
 game.Players.LocalPlayer.Character:PivotTo(workspace.dwfjhurr:GetPivot() + Vector3.new(0, 0, 0))
 local d = game.Players.LocalPlayer.Character:GetPivot()
 local bodyVelocity = Instance.new("BodyVelocity") bodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge) bodyVelocity.Velocity = Vector3.new(-1000, 0, 0) bodyVelocity.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
-wait(0.1)
+wait(0.2)
 bodyVelocity.Velocity = Vector3.new(1000, 0, 0)
-wait(0.1)
+wait(0.2)
 bodyVelocity:Destroy()
 wait(0.1)
 end

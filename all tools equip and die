@@ -1,0 +1,7 @@
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if a:IsA("Tool") then
+a.Parent = workspace.beekon101a
+end
+end
+wait(0.1)
+game.Players.LocalPlayer.Character.Humanoid.Health = 0

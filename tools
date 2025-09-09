@@ -299,3 +299,17 @@ end
 end
 end)
 tool35.Parent = game.Players.LocalPlayer.Backpack
+local tool36 = Instance.new("Tool")
+tool36.RequiresHandle = false
+tool36.Name = "save pos and teleport all part and load pos"
+tool36.Activated:connect(function()
+local d = game.Players.LocalPlayer.Character:GetPivot()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(d)
+end
+end
+end)
+tool36.Parent = game.Players.LocalPlayer.Backpack

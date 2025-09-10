@@ -68,5 +68,8 @@ end
 if inputText == ";animate delete" then
 game.Players.LocalPlayer.Character.Animate:Destroy()
 end
+if inputText == ";autorotate = false" then
+game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
+end
 end
 end)

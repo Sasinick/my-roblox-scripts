@@ -95,6 +95,13 @@ a.Transparency = 0.5
 end
 end
 end
+if inputText == ";save pos and die and load pos" then
+local d = game.Players.LocalPlayer.Character:GetPivot()
+local s = game.Players.RespawnTime
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+wait(s + 0.5)
+game.Players.LocalPlayer.Character:PivotTo(d)
+end
 end
 end)
 

@@ -81,6 +81,13 @@ a.Transparency = 0
 end
 end
 end
+if inputText == ";all part transparency = 1" then
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Part") then
+a.Transparency = 1
+end
+end
+end
 end
 end)
 

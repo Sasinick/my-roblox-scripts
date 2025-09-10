@@ -71,5 +71,8 @@ end
 if inputText == ";autorotate = false" then
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
 end
+if inputText == ";autorotate = true" then
+game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+end
 end
 end)

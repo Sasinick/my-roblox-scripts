@@ -67,3 +67,8 @@ end
 end
 end
 end)
+if inputText == ";animate delete" then
+game.Players.LocalPlayer.Character.Animate:Destroy()
+end
+end
+end)

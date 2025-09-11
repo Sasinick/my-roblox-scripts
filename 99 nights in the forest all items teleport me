@@ -1,3 +1,6 @@
+print("-----")
 for _, a in pairs(workspace.Items:GetChildren()) do
 a:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
+print(game.Players.LocalPlayer.Character:GetPivot())
+print(a:GetPivot())
 end

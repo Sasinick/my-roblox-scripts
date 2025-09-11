@@ -310,13 +310,13 @@ local tool38 = Instance.new("Tool")
 tool38.RequiresHandle = false
 tool38.Name = "CameraOffset y change"
 tool38.Activated:connect(function()
-game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(0, value, 0)
+game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(xvo, value, 0)
 end)
 tool38.Parent = game.Players.LocalPlayer.Backpack
 local tool39 = Instance.new("Tool")
 tool39.RequiresHandle = false
 tool39.Name = "CameraOffset z change"
 tool39.Activated:connect(function()
-game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(0, 0, value)
+game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(xco, yco, value)
 end)
 tool39.Parent = game.Players.LocalPlayer.Backpack

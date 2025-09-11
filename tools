@@ -5,6 +5,7 @@ tool2.Name = "autorotate = false"
 tool2.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
 wait(0.1)
+print("-")
 print(game.Players.LocalPlayer.Character.Humanoid.AutoRotate)
 end)
 tool2.Parent = game.Players.LocalPlayer.Backpack  
@@ -14,6 +15,7 @@ tool3.Name = "autorotate = true"
 tool3.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
 wait(0.1)
+print("-")
 print(game.Players.LocalPlayer.Character.Humanoid.AutoRotate)
 end)
 tool3.Parent = game.Players.LocalPlayer.Backpack
@@ -23,6 +25,7 @@ tool4.Name = "die"
 tool4.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 wait(0.1)
+print("-")
 print(game.Players.LocalPlayer.Character.Humanoid.Health)
 end)
 tool4.Parent = game.Players.LocalPlayer.Backpack
@@ -30,6 +33,7 @@ local tool7 = Instance.new("Tool")
 tool7.RequiresHandle = false
 tool7.Name = "all part transparency = 0"
 tool7.Activated:connect(function()
+print("-")
 for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Part") then
 a.Transparency = 0
@@ -50,8 +54,10 @@ for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Part") then
 a.Transparency = 1
 if a.Transparency == 1 then
+print("-")
 print(1)
 else
+print("-")
 print("not 1")
 end
 end
@@ -64,6 +70,7 @@ tool9.Name = "character freeze"
 tool9.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 wait(0.1)
+print("-")
 print(game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored)
 end)
 tool9.Parent = game.Players.LocalPlayer.Backpack

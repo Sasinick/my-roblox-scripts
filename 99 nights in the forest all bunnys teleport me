@@ -1,5 +1,7 @@
 for _, a in pairs(workspace.Characters:GetChildren()) do
     if a.Name == "Bunny" then
         a:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
+print(game.Players.LocalPlayer.Character:GetPivot())
+print(a:GetPivot())
     end
     end

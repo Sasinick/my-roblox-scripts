@@ -126,22 +126,13 @@ tool13.Activated:connect(function()
 print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
 end)
 tool13.Parent = game.Players.LocalPlayer.Backpack
-local tool14 = Instance.new("Tool")
-tool14.RequiresHandle = false
-tool14.Name = "darkdex"
-tool14.Activated:connect(function()
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-loadstring(game:HttpGet("https://raw.githubusercontent.com/memeenjoyer43/darkdex/refs/heads/main/script"))()
---credits to LorekeeperZinnia 
-end)
-tool14.Parent = game.Players.LocalPlayer.Backpack
 local tool16 = Instance.new("Tool")
 tool16.RequiresHandle = false
 tool16.Name = "walkspeed"
 tool16.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+print("-")
+print(game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
 end)
 tool16.Parent = game.Players.LocalPlayer.Backpack
 local tool18 = Instance.new("Tool")
@@ -149,6 +140,8 @@ tool18.RequiresHandle = false
 tool18.Name = "hipheight"
 tool18.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = value
+print("-")
+print(game.Players.LocalPlayer.Character.Humanoid.HipHeight)
 end)
 tool18.Parent = game.Players.LocalPlayer.Backpack
 local tool19 = Instance.new("Tool")
@@ -163,6 +156,8 @@ tool20.RequiresHandle = false
 tool20.Name = "x vector3 teleport"
 tool20.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(value, 0, 0)
+print("-")
+print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.X)
 end)
 tool20.Parent = game.Players.LocalPlayer.Backpack
 local tool21 = Instance.new("Tool")
@@ -170,6 +165,8 @@ tool21.RequiresHandle = false
 tool21.Name = "y vector3 teleport"
 tool21.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, value, 0)
+print("-")
+print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y)
 end)
 tool21.Parent = game.Players.LocalPlayer.Backpack
 local tool22 = Instance.new("Tool")
@@ -177,16 +174,20 @@ tool22.RequiresHandle = false
 tool22.Name = "z vector3 teleport"
 tool22.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 0, value)
+print("-")
+print(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Z)
 end)
 tool22.Parent = game.Players.LocalPlayer.Backpack
 local tool23 = Instance.new("Tool")
 tool23.RequiresHandle = false
 tool23.Name = "all part cancollide = false"
 tool23.Activated:connect(function()
+print("-")
 for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Part") then
 a.CanCollide = false
 end
+print(a.CanCollide)
 end
 end)
 tool23.Parent = game.Players.LocalPlayer.Backpack
@@ -194,10 +195,12 @@ local tool24 = Instance.new("Tool")
 tool24.RequiresHandle = false
 tool24.Name = "all part cancollide = true"
 tool24.Activated:connect(function()
+print("-")
 for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Part") then
 a.CanCollide = true
 end
+print(a.CanCollide)
 end
 end)
 tool24.Parent = game.Players.LocalPlayer.Backpack

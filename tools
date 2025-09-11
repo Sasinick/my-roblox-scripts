@@ -50,14 +50,13 @@ local tool8 = Instance.new("Tool")
 tool8.RequiresHandle = false
 tool8.Name = "all part transparency = 1"
 tool8.Activated:connect(function()
+print("-")
 for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Part") then
 a.Transparency = 1
 if a.Transparency == 1 then
-print("-")
 print(1)
 else
-print("-")
 print("not 1")
 end
 end
@@ -79,6 +78,9 @@ tool10.RequiresHandle = false
 tool10.Name = "character unfreeze"
 tool10.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+wait(0.1)
+print("-")
+print(game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored)
 end)
 tool10.Parent = game.Players.LocalPlayer.Backpack
 local tool11 = Instance.new("Tool")

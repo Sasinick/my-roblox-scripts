@@ -35,7 +35,7 @@ tool7.Name = "all part transparency = 0"
 tool7.Activated:connect(function()
 print("-")
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.Transparency = 0
 if a.Transparency == 0 then
 print(0)
@@ -52,7 +52,7 @@ tool8.Name = "all part transparency = 1"
 tool8.Activated:connect(function()
 print("-")
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.Transparency = 1
 if a.Transparency == 1 then
 print(1)

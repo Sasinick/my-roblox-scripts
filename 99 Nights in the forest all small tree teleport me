@@ -1,6 +1,8 @@
 
 for _, d in pairs(workspace.Map.Foliage:GetChildren()) do
     if d.Name == "Small Tree" then
-        d:PivotTo(game.Players.LocalPlayer.Character:GetPivot())
+        d:PivotTo(game.Players.LocalPlayer.Character:GetPivot
+print(game.Players.LocalPlayer.Character:GetPivot())
+print(d:GetPivot())
     end
     end

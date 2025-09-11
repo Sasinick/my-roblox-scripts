@@ -92,6 +92,12 @@ part.Name = "isdjif"
 part.Anchored = true
 part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
 part.Parent = workspace
+print("-")
+if part then
+print("found isdjif")
+else
+print("not found isdjif")
+end
 while true do
 workspace.isdjif.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -4, 0)
 wait(0.1)
@@ -106,6 +112,11 @@ local fire = Instance.new("Fire")
 fire.Heat = 40
 fire.Size = 20
 fire.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+if fire then
+print("found fire")
+else
+print("not found fire")
+end
 end)
 tool12.Parent = game.Players.LocalPlayer.Backpack
 local tool13 = Instance.new("Tool")

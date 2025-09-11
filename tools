@@ -204,15 +204,6 @@ end
 end
 end)
 tool24.Parent = game.Players.LocalPlayer.Backpack
-local tool25 = Instance.new("Tool")
-tool25.RequiresHandle = false
-tool25.Name = "kill all"
-tool25.Activated:connect(function()
-for _, a in pairs(game.Players:GetChildren()) do
-    a.Character.Humanoid.Health = 0
-end
-end)
-tool25.Parent = game.Players.LocalPlayer.Backpack
 local tool26 = Instance.new("Tool")
 tool26.RequiresHandle = false
 tool26.Name = "value = value + 1 and print value"
@@ -229,29 +220,14 @@ value = value - 1
 print(value)
 end)
 tool27.Parent = game.Players.LocalPlayer.Backpack
-local tool28 = Instance.new("Tool")
-tool28.RequiresHandle = false
-tool28.Name = "jump and character freeze"
-tool28.Activated:connect(function()
-game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
-wait(0.1)
-game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
-end)
-tool28.Parent = game.Players.LocalPlayer.Backpack
-local tool29 = Instance.new("Tool")
-tool29.RequiresHandle = false
-tool29.Name = "freefall"
-tool29.Activated:connect(function()
-game.Players.LocalPlayer.Character.Humanoid:ChangeState('Freefall')
-end)
-tool29.Parent = game.Players.LocalPlayer.Backpack
 local tool30 = Instance.new("Tool")
 tool30.RequiresHandle = false
 tool30.Name = "xray"
 tool30.Activated:connect(function()
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.Transparency = 0.5
+print(a.Transparency)
 end
 end
 end)
@@ -261,6 +237,7 @@ tool31.RequiresHandle = false
 tool31.Name = "fov"
 tool31.Activated:connect(function()
 workspace.Camera.FieldOfView = value
+print(workspace.Camera.FieldOfView)
 end)
 tool31.Parent = game.Players.LocalPlayer.Backpack
 local tool32 = Instance.new("Tool")
@@ -274,9 +251,11 @@ local tool33 = Instance.new("Tool")
 tool33.RequiresHandle = false
 tool33.Name = "teleport to random seat"
 tool33.Activated:connect(function()
+print("-")
 for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("Seat") then
 game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+print(a)
 end
 end
 end)
@@ -285,9 +264,11 @@ local tool34 = Instance.new("Tool")
 tool34.RequiresHandle = false
 tool34.Name = "teleport to random part"
 tool34.Activated:connect(function()
+print("-")
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+print(a)
 end
 end
 end)
@@ -296,10 +277,12 @@ local tool35 = Instance.new("Tool")
 tool35.RequiresHandle = false
 tool35.Name = "teleport to random unanchored part"
 tool35.Activated:connect(function()
+print("-")
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 if a.Anchored == false then
 game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+print(a)
 end
 end
 end
@@ -311,7 +294,8 @@ tool36.Name = "save pos and teleport all part and load pos"
 tool36.Activated:connect(function()
 local d = game.Players.LocalPlayer.Character:GetPivot()
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
+print(a)
 game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
 wait(0.1)
 game.Players.LocalPlayer.Character:PivotTo(d)

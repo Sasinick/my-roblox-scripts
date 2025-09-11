@@ -299,3 +299,17 @@ end
 end
 end)
 tool36.Parent = game.Players.LocalPlayer.Backpack
+local tool37 = Instance.new("Tool")
+tool37.RequiresHandle = false
+tool37.Name = "CameraOffset x change"
+tool37.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(value, 0, 0)
+end)
+tool37.Parent = game.Players.LocalPlayer.Backpack
+local tool38 = Instance.new("Tool")
+tool38.RequiresHandle = false
+tool38.Name = "CameraOffset y change"
+tool38.Activated:connect(function()
+game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(0, value, 0)
+end)
+tool38.Parent = game.Players.LocalPlayer.Backpack

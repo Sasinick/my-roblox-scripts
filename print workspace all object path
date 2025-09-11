@@ -1,0 +1,4 @@
+print(1)
+for _, a in pairs(workspace:GetChildren()) do
+print(a:GetFullName())
+end

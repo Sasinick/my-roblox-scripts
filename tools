@@ -1,28 +1,11 @@
 local value = 0
-local tool1 = Instance.new("Tool")
-tool1.RequiresHandle = false
-tool1.Name = "animate delete"
-tool1.Activated:connect(function()
-for _, d in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-if d.Name == "Animate" then
-print("Animate is found")
-else
-print("Animate is not found")
-end
-game.Players.LocalPlayer.Character.Animate:Destroy()
-if d.Name == "Animate" then
-print("Animate is found")
-else
-print("Animate is not found")
-end
-end
-end)
-tool1.Parent = game.Players.LocalPlayer.Backpack
 local tool2 = Instance.new("Tool")
 tool2.RequiresHandle = false
 tool2.Name = "autorotate = false"
 tool2.Activated:connect(function()
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
+wait(0.1)
+print(game.Players.LocalPlayer.Character.Humanoid.AutoRotate)
 end)
 tool2.Parent = game.Players.LocalPlayer.Backpack  
 local tool3 = Instance.new("Tool")

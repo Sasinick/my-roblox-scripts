@@ -63,6 +63,8 @@ tool9.RequiresHandle = false
 tool9.Name = "character freeze"
 tool9.Activated:connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+wait(0.1)
+print(game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored)
 end)
 tool9.Parent = game.Players.LocalPlayer.Backpack
 local tool10 = Instance.new("Tool")

@@ -184,10 +184,10 @@ tool23.Name = "all part cancollide = false"
 tool23.Activated:connect(function()
 print("-")
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.CanCollide = false
-end
 print(a.CanCollide)
+end
 end
 end)
 tool23.Parent = game.Players.LocalPlayer.Backpack
@@ -197,10 +197,10 @@ tool24.Name = "all part cancollide = true"
 tool24.Activated:connect(function()
 print("-")
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.CanCollide = true
-end
 print(a.CanCollide)
+end
 end
 end)
 tool24.Parent = game.Players.LocalPlayer.Backpack

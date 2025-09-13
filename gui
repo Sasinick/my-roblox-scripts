@@ -1,0 +1,183 @@
+local screengui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local uidragdetector = Instance.new("UIDragDetector")
+local textbutton = Instance.new("TextButton")
+local textbutton2 = Instance.new("TextButton")
+local textbutton3 = Instance.new("TextButton")
+local textbutton4 = Instance.new("TextButton")
+local textbutton5 = Instance.new("TextButton")
+local textbutton6 = Instance.new("TextButton")
+local textbutton7 = Instance.new("TextButton")
+local textbutton8 = Instance.new("TextButton")
+local textbutton9 = Instance.new("TextButton")
+local textbutton10 = Instance.new("TextButton")
+local textbutton11 = Instance.new("TextButton")
+local textbutton12 = Instance.new("TextButton")
+local textbutton13 = Instance.new("TextButton")
+local textbutton14 = Instance.new("TextButton")
+local textbutton15 = Instance.new("TextButton")
+screengui.Name = "screengui"
+screengui.Parent = game.Players.LocalPlayer.PlayerGui
+screengui.ResetOnSpawn = false
+frame.Name = "frame"
+frame.Parent = screengui
+frame.Position = UDim2.new(0, 0, 0)
+frame.Size = UDim2.new(0.3, 0.3, 0.3)
+uidragdetector.Parent = frame
+textbutton.Name = "textbutton"
+textbutton.Parent = frame
+textbutton.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton.Text = "animate delete"
+textbutton.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Animate:Destroy()
+end)
+textbutton2.Name = "textbutton2"
+textbutton2.Parent = frame
+textbutton2.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton2.Text = "auto rotate disable"
+textbutton2.Position = UDim2.new(0.15, 0, 0)
+textbutton2.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
+end)
+textbutton3.Name = "textbutton3"
+textbutton3.Parent = frame
+textbutton3.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton3.Text = "jump"
+textbutton3.Position = UDim2.new(0.28, 0, 0)
+textbutton3.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end)
+textbutton4.Name = "textbutton4"
+textbutton4.Parent = frame
+textbutton4.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton4.Text = "platformstand"
+textbutton4.Position = UDim2.new(0.39, 0, 0)
+textbutton4.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.PlatformStand = true
+end)
+textbutton5.Name = "textbutton5"
+textbutton5.Parent = frame
+textbutton5.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton5.Text = "xray"
+textbutton5.Position = UDim2.new(0.50, 0, 0)
+textbutton5.MouseButton1Click:Connect(function()
+for _, a in pairs(workspace:GetDescendants()) do    
+if a:IsA("Part") then
+a.Transparency = 0.5
+end
+end
+end)
+textbutton6.Name = "textbutton6"
+textbutton6.Parent = frame
+textbutton6.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton6.Text = "print all player cframe"
+textbutton6.Position = UDim2.new(0.65, 0, 0)
+textbutton6.MouseButton1Click:Connect(function()
+for _, a in pairs(game.Players:GetPlayers()) do
+print(a.Name .. ":" .. tostring(a.Character.HumanoidRootPart.CFrame))
+end
+end)
+textbutton7.Name = "textbutton7"
+textbutton7.Parent = frame
+textbutton7.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton7.Text = "exit button"
+textbutton7.Position = UDim2.new(0.80, 0, 0)
+textbutton7.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.screengui:Destroy()
+end)
+textbutton8.Name = "textbutton8"
+textbutton8.Parent = frame
+textbutton8.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton8.Text = "executor"
+textbutton8.Position = UDim2.new(0.90, 0, 0)
+textbutton8.MouseButton1Click:Connect(function()
+local screengui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local script = Instance.new("TextBox")
+local uidragdetector = Instance.new("UIDragDetector")
+local execute = Instance.new("TextButton")
+screengui.Name = "screengui2"
+screengui.Parent = game.Players.LocalPlayer.PlayerGui
+screengui.ResetOnSpawn = false
+frame.Name = "frame"
+frame.Parent = screengui
+frame.Position = UDim2.new(0, 0, 0)
+frame.Size = UDim2.new(0.05, 0.05, 0.05)
+uidragdetector.Parent = frame
+script.Name = "script"
+script.Text = "script"
+script.Parent = frame
+script.Position = UDim2.new(0, 0, 0)
+script.Size = UDim2.new(0.35, 0.35, 0.35)
+execute.Name = "execute"
+execute.Parent = frame
+execute.Position = UDim2.new(1, 1, 1)
+execute.Size = UDim2.new(0.35, 0.35, 0.35)
+execute.Text = "execute"
+execute.MouseButton1Click:Connect(function()
+loadstring(script.Text)()
+end)
+end)
+textbutton9.Name = "textbutton9"
+textbutton9.Parent = frame
+textbutton9.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton9.Text = "executor exit button"
+textbutton9.Position = UDim2.new(0, 0, 0.09)
+textbutton9.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.screengui2:Destroy()
+end)
+textbutton10.Name = "textbutton10"
+textbutton10.Parent = frame
+textbutton10.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton10.Text = "character freeze"
+textbutton10.Position = UDim2.new(0.16, 0, 0.09)
+textbutton10.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+end)
+textbutton11.Name = "textbutton11"
+textbutton11.Parent = frame
+textbutton11.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton11.Text = "character reset"
+textbutton11.Position = UDim2.new(0.30, 0, 0.09)
+textbutton11.MouseButton1Click:Connect(function()
+local d = game.Players.LocalPlayer.Character:GetPivot()
+local s = game.Players.RespawnTime
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+wait(s + 0.5)
+game.Players.LocalPlayer.Character:PivotTo(d)
+end)
+textbutton12.Name = "textbutton12"
+textbutton12.Parent  = frame
+textbutton12.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton12.Text = "jumpheight 100"
+textbutton12.Position = UDim2.new(0.44, 0, 0.09)
+textbutton12.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.JumpHeight = 100
+end)
+textbutton13.Name = "textbutton13"
+textbutton13.Parent = frame
+textbutton13.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton13.Text = "print humanoidrootpart touched part path"
+textbutton13.Position = UDim2.new(0.68, 0, 0.09)
+textbutton13.MouseButton1Click:Connect(function()
+local function onPartTouched(object)
+print(object:GetFullName())
+end
+game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(onPartTouched)
+end)
+textbutton14.Name = "textbutton14"
+textbutton14.Parent = frame
+textbutton14.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton14.Text = "gravity 2"
+textbutton14.Position = UDim2.new(0.91, 0, 0.09)
+textbutton14.MouseButton1Click:Connect(function()
+workspace.Gravity = 2
+end)
+textbutton15.Name = "textbutton15"
+textbutton15.Parent = frame
+textbutton15.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton15.Text = "darkdex"
+textbutton15.Position = UDim2.new(0, 0, 0.19)
+textbutton15.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/luastate/dex-v5/refs/heads/main/DarkDEX-V5'))()
+end)

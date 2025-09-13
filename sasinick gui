@@ -137,3 +137,18 @@ end,
 animated = true,
 }
 )
+section:Create(
+"Button",
+"xray",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.Transparency = 0.5
+end
+end
+end,
+{
+animated = true,
+}
+)
+section:Create(

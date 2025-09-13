@@ -180,3 +180,19 @@ end,
 animated = true,
 }
 )
+section:Create(
+"Button",
+"teleport to unanchored part",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+if a.Anchored == false then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end
+end,
+{
+animated = true,
+}
+)

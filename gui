@@ -16,6 +16,11 @@ local textbutton12 = Instance.new("TextButton")
 local textbutton13 = Instance.new("TextButton")
 local textbutton14 = Instance.new("TextButton")
 local textbutton15 = Instance.new("TextButton")
+local textbutton16 = Instance.new("TextButton")
+local textbutton17 = Instance.new("TextButton")
+local textbutton18 = Instance.new("TextButton")
+local textbutton19 = Instance.new("TextButton")
+local textbutton20 = Instance.new("TextButton")
 screengui.Name = "screengui"
 screengui.Parent = game.Players.LocalPlayer.PlayerGui
 screengui.ResetOnSpawn = false
@@ -180,4 +185,60 @@ textbutton15.Text = "darkdex"
 textbutton15.Position = UDim2.new(0, 0, 0.19)
 textbutton15.MouseButton1Click:Connect(function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/luastate/dex-v5/refs/heads/main/DarkDEX-V5'))()
+end)
+textbutton16.Name = "textbutton16"
+textbutton16.Parent = frame
+textbutton16.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton16.Text = "infinite yield"
+textbutton16.Position = UDim2.new(0.10, 0, 0.19)
+textbutton16.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+textbutton17.Name = "textbutton17"
+textbutton17.Parent = frame
+textbutton17.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton17.Text = "nameless admin"
+textbutton17.Position = UDim2.new(0.23, 0, 0.19)
+textbutton17.MouseButton1Click:Connect(function()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://github.com/FilteringEnabled/NamelessAdmin/blob/main/Source?raw=true"))()
+end)
+textbutton18.Name = "textbutton18"
+textbutton18.Parent = frame
+textbutton18.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton18.Text = "ez hub"
+textbutton18.Position = UDim2.new(0.36, 0, 0.19)
+textbutton18.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug42O/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+
+--[[
+
+NOTE 12/08/25: I haven’t been active in the exploiting community for over four years, so Ez Hub will not be in active development. 
+This script is quite outdated, and I’ve seen many users mention crashes in the comments.
+If anyone wants to help debug these issues, feel free to message me on Discord.
+I can’t guarantee a fix, as I’m not familiar with the exploits used nowadays, but I’m open to investigating together.
+
+Discord: cottient
+
+--]]
+end)
+textbutton19.Name = "textbutton19"
+textbutton19.Parent = frame
+textbutton19.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton19.Text = "orca hub"
+textbutton19.Position = UDim2.new(0.45, 0, 0.19)
+textbutton19.MouseButton1Click:Connect(function()
+loadstring(
+  game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua")
+)()
+end)
+textbutton20.Name = "textbutton20"
+textbutton20.Parent = frame
+textbutton20.Size = UDim2.new(0.1, 0.1, 0.1)
+textbutton20.Text = "lalol hub backdoor"
+textbutton20.Position = UDim2.new(0.57, 0, 0.19)
+textbutton20.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Its-LALOL/LALOL-Hub/main/Backdoor-Scanner/script'))()
 end)

@@ -185,7 +185,11 @@ textbutton15.Size = UDim2.new(0.1, 0.1, 0.1)
 textbutton15.Text = "darkdex"
 textbutton15.Position = UDim2.new(0, 0, 0.19)
 textbutton15.MouseButton1Click:Connect(function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/luastate/dex-v5/refs/heads/main/DarkDEX-V5'))()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/memeenjoyer43/darkdex/refs/heads/main/script"))()
+--credits to LorekeeperZinnia 
 end)
 textbutton16.Name = "textbutton16"
 textbutton16.Parent = frame

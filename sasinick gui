@@ -1,0 +1,139 @@
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/teppyboy/RbxScripts/master/Misc/UI_Libraries/Zypher/Library.lua"))()
+
+local main = library:CreateMain({
+    projName = "gui",
+    Resizable = true,
+    MinSize = UDim2.new(0,400,0,400),
+    MaxSize = UDim2.new(0,750,0,500),
+})
+
+local category = main:CreateCategory("sasinick gui")
+local section = category:CreateSection("sasinick gui")
+
+section:Create(
+    "TextBox",
+    "walkspeed",
+    function(input)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = input
+    end,
+    {
+        text = "walkspeed_value"
+}
+)
+section:Create(
+"TextBox",
+"hipheight",
+function(input)
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = input
+end,
+{
+text = "hipheight_value"
+}
+)
+section:Create(
+"Button",
+"health change to 0",
+function()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end,
+{
+animated = true,
+}
+)
+section:Create(
+"Button",
+"jump",
+function()
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end,
+{
+animated = true,
+}
+)
+section:Create(
+    "TextBox",
+    "gravity",
+    function(input)
+    workspace.Gravity = input
+    end,
+    {
+        text = "gravity_value"
+    }
+
+)
+section:Create(
+"Button",
+"all part cancollide change to false",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = false
+end
+end
+end,
+{
+animated = true,
+}
+)
+section:Create(
+"Button",
+"all part cancollide change to true",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = true
+end
+end
+end,
+{
+animated = true,
+}
+)
+section:Create(
+"TextBox",
+"teleport to player",
+function(input)
+game.Players.LocalPlayer.Character:PivotTo(game.Players[input].Character:GetPivot())
+end,
+{
+text = "player id"
+}
+)
+section:Create(
+"Button",
+"sit",
+function()
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end,
+{
+animated = true,
+}
+)
+section:Create(
+"Button",
+"teleport to seat",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Seat") then
+game.Players.LocalPlayer.Character:PivotTo(a:GetPivot())
+end
+end
+end,
+{
+animated = true,
+}
+)
+section:Create(
+"Button",
+"teleport to vehicle seat",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("VehicleSeat") then
+game.Players.LocalPlayer.Character:PivotTo(a:GetPivot())
+end
+end
+end,
+{
+animated = true,
+}
+)

@@ -324,3 +324,13 @@ end,
     animate = true
 }
 )
+section:Create(
+    "Button",
+    "fullbright",
+    function()
+    game:GetService("Lighting").Brightness = 20
+    end,
+    {
+        aniamted = true,
+    }
+)

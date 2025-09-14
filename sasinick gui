@@ -291,3 +291,17 @@ end,
 animated = true,
 }
 )
+section:Create(
+"Button",
+"all remoteevents send server",
+function()
+for _, a in pairs(game:GetDescendants()) do
+if a:IsA("RemoteEvent") then
+a:FireServer()
+end
+end
+end,
+{
+animated = true,
+}
+)

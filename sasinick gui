@@ -230,29 +230,3 @@ end,
 animated = true,
 }
 )
-section:Create(
-"Button",
-"noclip",
-function()
-game.RunService.Stepped:Connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = false
-game.Players.LcoalPlayer.Character.Torso.CanCollide = false
-end)
-end,
-{
-animated = true,
-}
-)
-section:Create(
-"Button",
-"unnoclip",
-function()
-game.RunService.Stepped:Connect(function()
-game.Players.LocalPlayer.Character.Head.CanCollide = true
-game.Players.LcoalPlayer.Character.Torso.CanCollide = true
-end)
-end,
-{
-animated = true,
-}
-)

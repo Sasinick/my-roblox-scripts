@@ -244,3 +244,35 @@ end,
 animated = true,
 }
 )
+section:Create(
+"Button",
+"teleport to an empty seat",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Seat") then
+if a.Occupant == nil then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end
+end,
+{
+animated = true,
+}
+)
+section:Create(
+"Button",
+"teleport to an empty car seat",
+function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("VehicleSeat") then
+if a.Occupant == nil then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
+end
+end
+end
+end,
+{
+animated = true,
+}
+)

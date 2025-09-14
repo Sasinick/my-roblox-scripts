@@ -250,7 +250,8 @@ section:Create(
 function()
 for _, part in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 if part:IsA("BasePart") then
-part.CanCollide = trueend
+part.CanCollide = true
+end
 end
 end,
 {

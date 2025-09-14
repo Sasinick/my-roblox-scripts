@@ -234,11 +234,10 @@ section:Create(
 "Button",
 "noclip",
 function()
-for _, part in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-if part:IsA("BasePart") then
-part.CanCollide = false
-end
-end
+game.RunService.Stepped:Connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LcoalPlayer.Character.Torso.CanCollide = false
+end)
 end,
 {
 animated = true,
@@ -248,11 +247,10 @@ section:Create(
 "Button",
 "unnoclip",
 function()
-for _, part in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-if part:IsA("BasePart") then
-part.CanCollide = true
-end
-end
+game.RunService.Stepped:Connect(function()
+game.Players.LocalPlayer.Character.Head.CanCollide = true
+game.Players.LcoalPlayer.Character.Torso.CanCollide = true
+end)
 end,
 {
 animated = true,

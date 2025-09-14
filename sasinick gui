@@ -32,7 +32,7 @@
 	)
 	section:Create(
 	"Button",
-	"health change to 0",
+	"die",
 	function()
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
 	end,
@@ -191,6 +191,40 @@ game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
 end
 end
 end
+end,
+{
+animated = true,
+}
+)
+section:Create(
+    "Button",
+    "animate delete",
+    function()
+    game.Players.LocalPlayer.Character.Animate:Destroy()
+    end,
+    {
+        animated = true,
+    }
+)
+section:Create(
+"Button",
+"character reset",
+function()
+local d = game.Players.LocalPlayer.Character:GetPivot()
+local s = game.Players.RespawnTime
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+wait(s + 0.5)
+game.Players.LocalPlayer.Character:PivotTo(d)
+end,
+{
+animated = true,
+}
+)
+section:Create(
+"Button",
+"character freeze",
+function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end,
 {
 animated = true,

@@ -348,7 +348,7 @@ section:Create(
     "TextBox",
     "view player",
     function(input)
-    workspace.Camera.CameraSubject = game.Players[input].HumanoidRootPart
+    workspace.Camera.CameraSubject = game.Players[input].Character.HumanoidRootPart
     end,
     {
         text = "player id"

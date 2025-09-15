@@ -334,3 +334,13 @@ section:Create(
         aniamted = true,
     }
 )
+section:Create(
+"TextBox",
+"fov",
+function(input)
+workspace.Camera.FieldOfView = input
+end,
+{
+text = "fov_value"
+}
+)

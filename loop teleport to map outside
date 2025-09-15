@@ -1,7 +1,7 @@
 local part = Instance.new("Part")
 part.Anchored = true
 part.Parent = workspace
-part.CFrame = CFrame.new(2000, 297, 0))
+part.CFrame = CFrame.new(2000, 297, 0)
 while true do
 game.Players.LocalPlayer.Character:PivotTo(CFrame.new(2000, 300, 0))
 wait(0.1)

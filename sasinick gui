@@ -344,3 +344,13 @@ end,
 text = "fov_value"
 }
 )
+section:Create(
+    "TextBox",
+    "view player",
+    function(input)
+    workspace.Camera.CameraSubject = game.Players[input].HumanoidRootPart
+    end,
+    {
+        text = "player id"
+    }
+)

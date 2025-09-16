@@ -3,6 +3,7 @@ local frame = Instance.new("Frame")
 local textbox = Instance.new("TextBox")
 local button = Instance.new("TextButton")
 local button2 = Instance.new("TextButton")
+local button3 = Instance.new("TextButton")
 local dragdetector = Instance.new("UIDragDetector")
 executor.Name = "executor"
 executor.Parent = game.Players.LocalPlayer.PlayerGui
@@ -13,6 +14,10 @@ dragdetector.Parent = frame
 textbox.Parent = frame
 textbox.Text = "script"
 textbox.Size = UDim2.new(0.3, 0.3, 0.3)
+button3.Parent = frame
+button3.Text = "exit"
+button3.Position = UDim2.new(0.1, 0.1, 0.9)
+button3.Size = UDim2.new(0.1, 0.1, 0.1)
 button2.Parent = frame
 button2.Text = "clear"
 button2.Position = UDim2.new(0.1, 0.1, 0.8)
@@ -26,4 +31,7 @@ loadstring(textbox.Text)()
 end)
 button2.MouseButton1Click:Connect(function()
 textbox.Text = ""
+end)
+button3.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.PlayerGui.executor:Destroy()
 end)

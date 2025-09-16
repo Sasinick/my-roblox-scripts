@@ -2,6 +2,7 @@ local executor = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local textbox = Instance.new("TextBox")
 local button = Instance.new("TextButton")
+local button2 = Instance.new("TextButton")
 executor.Name = "executor"
 executor.Parent = game.Players.LocalPlayer.PlayerGui
 frame.Parent = executor
@@ -9,10 +10,17 @@ frame.Size = UDim2.new(0.1, 0.2, 0.1)
 textbox.Parent = frame
 textbox.Text = "script"
 textbox.Size = UDim2.new(0.3, 0.3, 0.3)
+button2.Parent = frame
+button2.Text = "clear"
+button2.Position = UDim2.new(0.1, 0.1, 0.8)
+button2.Size = UDim2.new(0.1, 0.1, 0.1)
 button.Parent = frame
 button.Text = "execute"
 button.Position = UDim2.new(0.1, 0.1, 0.5)
 button.Size = UDim2.new(0.1, 0.1, 0.1)
 button.MouseButton1Click:Connect(function()
 loadstring(textbox.Text)()
+end)
+button2.MouseButton1Click:Connect(function()
+textbox.Text = ""
 end)

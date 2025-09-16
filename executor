@@ -5,6 +5,7 @@ local button = Instance.new("TextButton")
 local button2 = Instance.new("TextButton")
 executor.Name = "executor"
 executor.Parent = game.Players.LocalPlayer.PlayerGui
+executor.ResetOnSpawn = false
 frame.Parent = executor
 frame.Size = UDim2.new(0.1, 0.2, 0.1)
 textbox.Parent = frame

@@ -15,10 +15,6 @@ dragdetector.Parent = frame
 textbox.Parent = frame
 textbox.Text = "script"
 textbox.Size = UDim2.new(0.3, 0.3, 0.3)
-button4.Parent = frame
-button4.Text = "character reset"
-button4.Position = UDim2.new(0.6, 0.1, 0.1)
-button4.Size = UDim2.new(0.1, 0.1, 0.1)
 button3.Parent = frame
 button3.Text = "exit"
 button3.Position = UDim2.new(0.1, 0.1, 0.9)
@@ -39,11 +35,4 @@ textbox.Text = ""
 end)
 button3.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.PlayerGui.executor:Destroy()
-end)
-button4.MouseButton1Click:Connect(function()
-local position = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-local respawntime = game.Players.RespawnTime
-game.Players.LocalPlayer.Character.Humanoid.Health = 0
-task.wait(respawntime + 0.5)
-game.Players.localPlayer.Character.HumanoidRootPart.CFrame = position
 end)

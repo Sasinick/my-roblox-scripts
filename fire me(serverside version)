@@ -1,0 +1,5 @@
+local name = "sasinick1"
+local fire = Instance.new("Fire")
+fire.Heat = 40
+fire.Size = 20
+fire.Parent  = game.Players[name].Character.HumanoidRootPart

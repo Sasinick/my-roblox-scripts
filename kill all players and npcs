@@ -1,0 +1,6 @@
+for _, a in pairs(workspace:GetDescendants()) do
+    local humanoid = a:FindFirstChild("Humanoid")
+if humanoid then
+humanoid.Health = 0
+end
+end

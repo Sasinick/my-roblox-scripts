@@ -1,4 +1,9 @@
-local part = Instance.new("Part")
+local part = Instance.new("Part")-- clientside
 part.Anchored = true
 part.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+part.Parent = workspace
+local name = "sasinick1"
+local part = Instance.new("Part")-- serverside
+part.Anchored = true
+part.CFrame = game.Players[name].Character.HumanoidRootPart.CFrame
 part.Parent = workspace

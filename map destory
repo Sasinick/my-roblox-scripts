@@ -1,0 +1,3 @@
+for _, map in pairs(workspace:GetDescendants()) do
+map:Destroy()
+end

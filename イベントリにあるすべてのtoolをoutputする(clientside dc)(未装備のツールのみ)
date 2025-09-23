@@ -1,3 +1,3 @@
-for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 print(a)
 end

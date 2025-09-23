@@ -36,5 +36,6 @@ textbutton2.Text = "jumppower change"
 textbutton2.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton2.Position = UDim2.new(0.004, 0.1, 0.51)
 textbutton2.MouseButton1Click:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.Ca
+game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = textbox2.Text
 end)

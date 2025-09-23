@@ -1,4 +1,6 @@
 local d = game.Players.LocalPlayer.Name
 for _, a in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+if a:IsA("Tool") then
 a.Parent = workspace[d]
+end
 end

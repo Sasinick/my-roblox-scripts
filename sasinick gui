@@ -7,8 +7,10 @@
 		MaxSize = UDim2.new(0,750,0,500),
 	})
 
-	local category = main:CreateCategory("sasinick gui")
-	local section = category:CreateSection("sasinick gui")
+	local category = main:CreateCategory("universal")
+	local section = category:CreateSection("universal")
+    local category2 = main:CreateCategory("just a baseplate")
+    local section2 = category2:CreateSection("just a baseplate")
 
 	section:Create(
 		"TextBox",

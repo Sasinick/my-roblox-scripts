@@ -5,8 +5,7 @@ gui.Parent = player.PlayerGui
 local wct180b = Instance.new("TextButton")
 wct180b.Name = "walkspeed change to 180 button"
 wct180b.Text = "walkspeed change to 180"
-wct180b.Size = Udim2.new(0, 200, 0, 50)
-wct180b.Position = UDim2.new(0.736, 0, 0.08, 0)
+wct180b.Size = Udim2.new(0.2, 0.2, 0.2)
 wct180b.Parent = gui
 wct180b.MouseButton1Click:Connect(function()
 player.Character.Humanoid.WalkSpeed = 180

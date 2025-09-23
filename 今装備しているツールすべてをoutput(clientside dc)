@@ -1,5 +1,5 @@
 local d = game.Players.LocalPlayer.Name
-for _, d in pairs(workspace[d]:GetChildren()) do
+for _, d in pairs(workspace[d]:GetDescendants()) do
     if d:IsA("Tool") then
         print(d)
     end

@@ -1,8 +1,8 @@
 while true do
-    for _, a in pairs(game.ReplicatedStorage:GetChildren()) do
+    for _, a in pairs(game.ReplicatedStorage:GetDescendants()) do
         if a:IsA("RemoteEvent") then
             a:FireServer()
         end
     end
-    wait(0.1)
+    task.wait(0.1)
 end

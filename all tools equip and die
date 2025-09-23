@@ -1,4 +1,4 @@
-for _, a in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
 if a:IsA("Tool") then
 a.Parent = workspace.beekon101a
 end

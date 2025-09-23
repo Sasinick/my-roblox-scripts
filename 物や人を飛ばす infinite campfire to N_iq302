@@ -1,4 +1,0 @@
-while true do
-workspace.beekon10666SpawnedInToys.Campfire:PivotTo(game.Players["N_iq302"].Character:GetPivot())
-wait(0.1)
-end

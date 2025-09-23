@@ -1,8 +1,8 @@
 local name = "sasinick1"
 for _, tools in pairs(workspace[name]:GetDescendants()) do
 if tools:IsA("Tool") then
-if tools.CanBeDropped = true then
+if tools.CanBeDropped == true then
 tools.Parent = workspace
 end
 end
-end)
+end

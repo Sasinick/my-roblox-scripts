@@ -356,3 +356,18 @@ section:Create(
         text = "player id"
     }
 )
+section2:Create(
+"Button",
+"my character all parts anchored and die",
+function()
+for _, a in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if a:IsA("BasePart") then
+a.Anchored = true
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+end
+end,
+{
+animated = true
+}
+)

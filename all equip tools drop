@@ -1,0 +1,7 @@
+for _, tools in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+if tools:IsA("Tool") then
+if tools.CanBeDropped = true then
+tool.Parent = workspace
+end
+end
+end)

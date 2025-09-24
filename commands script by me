@@ -161,5 +161,8 @@ end
 if inputText == ";uncharacter freeze" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end
+if inputText == ";execute" then
+loadstring(inputText2)()
+end
 end
 end)

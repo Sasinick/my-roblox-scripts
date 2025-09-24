@@ -121,5 +121,8 @@ end
 if inputText == ";sit" then
 game.Players.LocalPlayer.Character.Humanoid.Sit = not game.Players.LocalPlayer.Character.Humanoid.Sit
 end
+if inputText == ";hipheight" then
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = inputText2
+end
 end
 end)

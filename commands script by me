@@ -76,21 +76,21 @@ game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
 end
 if inputText == ";all part transparency = 0" then
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.Transparency = 0
 end
 end
 end
 if inputText == ";all part transparency = 1" then
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.Transparency = 1
 end
 end
 end
 if inputText == ";xray" then
 for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Part") then
+if a:IsA("BasePart") then
 a.Transparency = 0.5
 end
 end

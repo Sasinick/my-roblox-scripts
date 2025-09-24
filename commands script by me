@@ -158,5 +158,8 @@ end
 if inputText == ";character freeze" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end
+if inputText == ";uncharacter freeze" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end
 end
 end)

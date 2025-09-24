@@ -115,5 +115,8 @@ end
 if inputText == ";teleport to player" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[inputText2].Character.HumanoidRootPart.CFrame
 end
+if inputText == ";die" then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
 end
 end)

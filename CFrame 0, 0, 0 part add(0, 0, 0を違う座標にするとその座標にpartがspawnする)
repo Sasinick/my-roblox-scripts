@@ -1,3 +1,9 @@
 local part = Instance.new('Part')
+part.Name = "sfdjfjdu3"
 part.Parent = workspace
 part.CFrame = CFrame.new(0, 0, 0)
+if workspace:FindFirstChild("sfdjfjdu3") then
+print("found sfdjffdu3")
+else
+print("not found sfdjffdu3")
+end

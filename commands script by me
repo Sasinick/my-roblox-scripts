@@ -164,5 +164,5 @@ end
 if inputText == ";execute" then
 loadstring(inputText2)()
 end
-end
-end)
+if inputText == ";character freeze2" then
+loadstring(inputText2)()

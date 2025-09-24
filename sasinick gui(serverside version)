@@ -13,6 +13,7 @@ local textbutton7 = Instance.new("TextButton")
 local textbutton8 = Instance.new("TextButton")
 local textbutton9 = Instance.new("TextButton")
 local textbutton10 = Instance.new("TextButton")
+local textbutton11 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -172,5 +173,16 @@ textbutton10.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton10.MouseButton1Click:Connect(function()
 for _, a in pairs(game.Players:GetPlayers()) do
 a.Character:Destroy()
+end
+end)
+textbutton11.Parent = frame
+textbutton11.Text = "all parts anchored = false"
+textbutton11.Position = UDim2.new(0.88, 0.01, 0.01)
+textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton11.MouseButton1Click:Connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.Anchored = false
+end
 end
 end)

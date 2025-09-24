@@ -1,1 +1,2 @@
 game.Players.LocalPlayer.Character.Humanoid.AutoRotate = false
+print(game.Players.LocalPlayer.Character.Humanoid.AutoRotate)

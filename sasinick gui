@@ -4,8 +4,8 @@ local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")
 local textlabel = Instance.new("TextLabel")
 local textbox1 = Instance.new("TextBox")
-local textbox2 = Instance.new("TextButton")
-local textbutton3 = Instance.new("TextButton")
+local textbox2 = Instance.new("TextBox")
+local textbox3 = Instance.new("TextBox")
 local textbutton4 = Instance.new("TextButton")
 local textbutton5 = Instance.new("TextButton")
 local textbutton6 = Instance.new("TextButton")
@@ -36,62 +36,22 @@ textbox2.Text = "jumppower"
 textbox2.Position = UDim2.new(0.004, 0.1, 0.27)
 textbox2.Size = UDim2.new(0.16, 0.16, 0.16)
 textbox2.FocusLost:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.
+game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = textbox2.Text
 end)
-textbutton3.Parent = frame
-textbutton3.Text = "all players walkspeed change to 0"
-textbutton3.Position = UDim2.new(0.004, 0.1, 0.39)
-textbutton3.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton3.MouseButton1Click:Connect(function()
-for _, a in pairs(game.Players:GetPlayers()) do
-a.Character.Humanoid.WalkSpeed = 0
-end
+textbox3.Parent = frame
+textbox3.Text = "gravity"
+textbox3.Position = UDim2.new(0.004, 0.1, 0.39)
+textbox3.Size = UDim2.new(0.16, 0.16, 0.16)
+textbox3.FocusLost:Connect(function()
+workspace.Gravity = textbox3.Text
 end)
 textbutton4.Parent = frame
-textbutton4.Text = "part rain"
+textbutton4.Text = "die"
 textbutton4.Position = UDim2.new(0.004, 0.1, 0.52)
 textbutton4.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton4.MouseButton1Click:Connect(function()
-local name = p
-local positionY = game.Players[name].Character.HumanoidRootPart.CFrame.Y + 30
-while true do
-local a = math.random(-1000, 1000)
-local b = math.random(-1000, 1000)
-local part = Instance.new("Part")
-part.Anchored = false
-part.Parent = workspace
-part.CFrame = CFrame.new(a, positionY, b)
-task.wait(0.1)
-end
-while true do
-local a = math.random(-1000, 1000)
-local b = math.random(-1000, 1000)
-local part = Instance.new("Part")
-part.Anchored = false
-part.Parent = workspace
-part.CFrame = CFrame.new(a, positionY, b)
-task.wait(0.1)
-end
-while true do
-local a = math.random(-1000, 1000)
-local b = math.random(-1000, 1000)
-local part = Instance.new("Part")
-part.Anchored = false
-part.Parent = workspace
-part.CFrame = CFrame.new(a, positionY, b)
-task.wait(0.1)
-end
-end)
-textbutton5.Parent = frame
-textbutton5.Text = "all players guis delete"
-textbutton5.Position = UDim2.new(0.004, 0.1, 0.52)
-textbutton5.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton5.MouseButton1Click:Connect(function()
-for _, a in pairs(game.Players:GetPlayers()) do
-if a:FindFirstChild("PlayerGui") then
-a.PlayerGui:Destroy()
-end
-end
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 textbutton6.Parent = frame
 textbutton6.Text = "loop all players guis delete"

@@ -124,5 +124,8 @@ end
 if inputText == ";hipheight" then
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = inputText2
 end
+if inputText == ";jump" then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end
 end
 end)

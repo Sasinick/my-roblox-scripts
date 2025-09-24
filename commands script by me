@@ -102,6 +102,8 @@ game.Players.LocalPlayer.Character.Humanoid.Health = 0
 wait(s + 0.5)
 game.Players.LocalPlayer.Character:PivotTo(d)
 end
+if inputText == ";end" then
+game.Players.LocalPlayer.PlayerGui.screengui:Destroy()
+end
 end
 end)
-

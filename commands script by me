@@ -134,5 +134,12 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.CFrame
 end
 end
 end
+if inputText == ";all part cancollide = false" then
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = false
+end
+end
+end
 end
 end)

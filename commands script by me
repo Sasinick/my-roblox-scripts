@@ -176,5 +176,8 @@ local y = math.random(-500,500)
 local z = math.random(-500,500)
 game.Players.LocalPlayer.Character:PivotTo(CFrame.new(x,y,z))
 end
+if inputText == ";gravity" then
+workspace.Gravity = inputText2
+end
 end
 end)

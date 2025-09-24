@@ -176,8 +176,12 @@ local y = math.random(-500,500)
 local z = math.random(-500,500)
 game.Players.LocalPlayer.Character:PivotTo(CFrame.new(x,y,z))
 end
-if inputText == ";gravity" then
-workspace.Gravity = inputText2
+if inputText == ";teleport to seat" then
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Seat") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.CFrame
+end
+end
 end
 end
 end)

@@ -105,5 +105,8 @@ end
 if inputText == ";end" then
 game.Players.LocalPlayer.PlayerGui.screengui:Destroy()
 end
+if inputText == ";walkspeed" then
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = inputText2
+end
 end
 end)

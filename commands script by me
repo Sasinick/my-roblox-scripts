@@ -99,7 +99,7 @@ if inputText == ";respawn" then
 local d = game.Players.LocalPlayer.Character:GetPivot()
 local s = game.Players.RespawnTime
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
-wait(s + 0.5)
+wait(s + 0.6)
 game.Players.LocalPlayer.Character:PivotTo(d)
 end
 if inputText == ";end" then
@@ -165,4 +165,10 @@ if inputText == ";execute" then
 loadstring(inputText2)()
 end
 if inputText == ";character freeze2" then
-loadstring(inputText2)()
+local bodyVelocity = Instance.new("BodyVelocity") bodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge) bodyVelocity.Velocity = Vector3.new(0, 0, 0) bodyVelocity.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+end
+if inputText == ";uncharacter freeze2" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity:Destroy()
+end
+end
+end)

@@ -128,7 +128,7 @@ if inputText == ";jump" then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
 if inputText == ";teleport to part" then
-for _, a in pairs(workspace:GetDescendants()) do
+for _, a in pairs(workspace:GetChildren()) do
 if a:IsA("BasePart") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.CFrame
 end

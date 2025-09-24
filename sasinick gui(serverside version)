@@ -12,6 +12,7 @@ local textbutton6 = Instance.new("TextButton")
 local textbutton7 = Instance.new("TextButton")
 local textbutton8 = Instance.new("TextButton")
 local textbutton9 = Instance.new("TextButton")
+local textbutton10 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -162,5 +163,14 @@ textbutton9.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton9.MouseButton1Click:Connect(function()
 for _, a in pairs(game.Players:GetPlayers()) do
 a:Destroy()
+end
+end)
+textbutton10.Parent = frame
+textbutton10.Text = "delete all players character"
+textbutton10.Position = UDim2.new(0.53, 0.01, 0.01)
+textbutton10.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton10.MouseButton1Click:Connect(function()
+for _, a in pairs(game.Players:GetPlayers()) do
+a.Character:Destroy()
 end
 end)

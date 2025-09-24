@@ -170,5 +170,11 @@ end
 if inputText == ";uncharacter freeze2" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.BodyVelocity:Destroy()
 end
+if inputText == ";teleport to random position" then
+local x = math.random(-500,500)
+local y = math.random(-500,500)
+local z = math.random(-500,500)
+game.Players.LocalPlayer.Character:PivotTo(CFrame.new(x,y,z))
+end
 end
 end)

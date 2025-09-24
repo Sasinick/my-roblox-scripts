@@ -1,1 +1,2 @@
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
+print(game.Players.LocalPlayer.Character.Humanoid.Sit)

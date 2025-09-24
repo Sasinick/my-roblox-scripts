@@ -148,5 +148,12 @@ a.CanCollide = true
 end
 end
 end
+if inputText == ";all part transparency" then
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.Transparency = inputText2
+end
+end
+end
 end
 end)

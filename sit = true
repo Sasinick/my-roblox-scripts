@@ -1,1 +1,9 @@
 game.Players.LocalPlayer.Character.Humanoid.Sit = true
+local StarterGui = game:GetService("StarterGui")
+if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+StarterGui:SetCore("SendNotification", {
+Title = sit,
+Text = true,
+Duration = 5
+}
+end

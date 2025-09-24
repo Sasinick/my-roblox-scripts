@@ -1,1 +1,6 @@
 workspace.Camera:Destroy()
+if workspace:FindFirstChild("Camera") then
+print("found camera")
+else
+print("not found camera")
+end

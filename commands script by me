@@ -108,5 +108,9 @@ end
 if inputText == ";walkspeed" then
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = inputText2
 end
+if inputText == ";jumppower" then
+game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = inputText2
+end
 end
 end)

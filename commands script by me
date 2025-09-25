@@ -183,5 +183,13 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.CFrame
 end
 end
 end
+if inputText == ";all tools equip" then
+local n = game.Players.LocalPlayer.Name
+for _, a in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+if a:IsA("Tool") then
+a.Parent = workspace[n]
+end
+end
+end
 end
 end)

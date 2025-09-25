@@ -216,5 +216,8 @@ end
 if inputText == ";gravity" then
 workspace.Gravity = inputText2
 end
+if inputText == ";view player" then
+workspace.Gravity = inputText2
+end
 end
 end)

@@ -1,0 +1,8 @@
+local d = game.Players.LocalPlayer.Name
+for _, a in pairs(workspace[d]:GetDescendants()) do
+    if a:IsA("Accessory") then
+        a.Handle.AccessoryWeld:Destroy()
+        task.wait(0.1)
+        a.Handle.CanCollide = true
+    end
+    end

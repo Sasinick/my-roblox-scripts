@@ -213,5 +213,8 @@ end
 if inputText == ";animate freeze" then
 game.Players.LocalPlayer.Character.Animate:Destroy()
 end
+if inputText == ";gravity" then
+workspace.Gravity = inputText2
+end
 end
 end)

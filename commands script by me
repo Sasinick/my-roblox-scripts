@@ -191,5 +191,12 @@ a.Parent = workspace[n]
 end
 end
 end
+if inputText == ";noclip" then
+for _, a in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = false
+end
+end
+end
 end
 end)

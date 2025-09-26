@@ -251,5 +251,12 @@ workspace[playername].Spray.Parent = workspace
 task.wait(0.1)
 end
 end
+if inputText == ";free client script executor get spray tool" then
+local spraypart = workspace.Fencing.SprayButton
+local characterposition = game.Players.LocalPlayer.Character:GetPivot()
+game.Players.LocalPlayer.Character:PivotTo(spraypart.CFrame + Vector3.new(0, 1, 0))
+task.wait(0.6)
+game.Players.LocalPlayer.Character:PivotTo(characterposition)
+end
 end
 end)

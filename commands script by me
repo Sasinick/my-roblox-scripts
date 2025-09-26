@@ -218,3 +218,11 @@ workspace.Camera.CameraSubject = game.Players[inputText2].Character.HumanoidRoot
 end
 end
 end)
+if inputText == ";loop teleport to player" then
+while true do
+task.wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(game.Players[inputText2].Character:GetPivot())
+end
+end
+end
+end)

@@ -216,8 +216,6 @@ end
 if inputText == ";view player" then
 workspace.Camera.CameraSubject = game.Players[inputText2].Character.HumanoidRootPart
 end
-end
-end)
 if inputText == ";loop teleport to player" then
 while true do
 task.wait(0.1)

@@ -224,6 +224,10 @@ end
 end
 if inputText == ";fencing get spray tool" then
 local sprayposition = workspace.Handle.CFrame
+local playerposition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+task.wait(0.1)
+game.Players.LocalPlayer.Character:PivotTo(playerposition)
 workspace.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0.5, 0, 0)
 task.wait(0.1)
 workspace.Handle.CFrame  = sprayposition

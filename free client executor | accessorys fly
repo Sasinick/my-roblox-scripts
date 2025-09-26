@@ -1,0 +1,11 @@
+local d = game.Players.LocalPlayer.Name
+for _, a in pairs(workspace[d]:GetDescendants()) do
+	if a:IsA("Accessory") then
+		a.Handle.AccessoryWeld:Destroy()
+		a.Handle.CanCollide = true
+		local bodyVelocity = Instance.new("BodyVelocity")
+		bodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+		bodyVelocity.Velocity = Vector3.new(0, 0, 0)
+		bodyVelocity.Parent = a.Handle
+	end
+end

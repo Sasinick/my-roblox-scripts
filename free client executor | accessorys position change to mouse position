@@ -9,7 +9,7 @@ for _, a in pairs(workspace[d]:GetDescendants()) do
 				handle.CanCollide = false
 				local bodyPosition = Instance.new("BodyPosition")
 				bodyPosition.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
-				bodyPosition.D = 1000
+				bodyPosition.D = 100
 				bodyPosition.P = 10000
 				bodyPosition.Parent = handle
 game:GetService("RunService").Stepped:Connect(function()

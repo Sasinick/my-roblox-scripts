@@ -1,3 +1,4 @@
+function sasinickgui()
 local p = game.Players.LocalPlayer.Name
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
@@ -137,3 +138,5 @@ a.Anchored = false
 end
 end
 end)
+end
+sasinickgui()

@@ -49,62 +49,82 @@ textbox3.Text = "gravity"
 textbox3.Position = UDim2.new(0.004, 0.1, 0.39)
 textbox3.Size = UDim2.new(0.16, 0.16, 0.16)
 textbox3.FocusLost:Connect(function()
-workspace.Gravity = textbox3.Text
+function gravitychange(gravity)
+workspace.Gravity = gravity
+end
+gravitychange(textbox3.Text)
 end)
 textbutton4.Parent = frame
 textbutton4.Text = "die"
 textbutton4.Position = UDim2.new(0.004, 0.1, 0.52)
 textbutton4.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton4.MouseButton1Click:Connect(function()
+function die()
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+die()
 end)
 textbutton6.Parent = frame
 textbutton6.Text = "noclip"
 textbutton6.Position = UDim2.new(0.004, 0.1, 0.64)
 textbutton6.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton6.MouseButton1Click:Connect(function()
+function noclip()
 for _, a in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 if a:IsA("BasePart") then
 a.CanCollide = false
 end
 end
+end
+noclip()
 end)
 textbutton7.Parent = frame
 textbutton7.Text = "respawn"
 textbutton7.Position = UDim2.new(0.004, 0.1, 0.76)
 textbutton7.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton7.MouseButton1Click:Connect(function()
+function respawn()
 local pos = game.Players.LocalPlayer.Character:GetPivot()
 local respawntime = game.Players.RespawnTime
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 task.wait(respawntime + 0.6)
 game.Players.LocalPlayer.Character:PivotTo(pos)
+end
+respawn()
 end)
 textbutton8.Parent = frame
 textbutton8.Text = "teleport to spawn location"
 textbutton8.Position = UDim2.new(0.004, 0.1, 0.88)
 textbutton8.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton8.MouseButton1Click:Connect(function()
+function teleporttospawnlocation()
 for _, a in pairs(workspace:GetDescendants()) do
 if a.Name == "SpawnLocation" then
 game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
 end
 end
+end
+teleporttospawnlocation()
 end)
 textbutton9.Parent = frame
 textbutton9.Text = "jump"
 textbutton9.Position = UDim2.new(0.20, 0.01, 0.01)
 textbutton9.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton9.MouseButton1Click:Connect(function()
+function jump()
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end
+jump()
 end)
 textbox4.Parent = frame
 textbox4.Text = "teleport to player"
 textbox4.Position = UDim2.new(0.39, 0.01, 0.01)
 textbox4.Size = UDim2.new(0.16, 0.16, 0.16)
 textbox4.FocusLost:Connect(function()
-local character = game.Players.LocalPlayer.Character
-character.HumanoidRootPart.CFrame = game.Players[textbox4.Text].Character.HumanoidRootPart.CFrame
+function teleporttoplayer(player)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[player].Character.HumanoidRootPart.CFrame
+end
+teleporttoplayer(textbox4.Text)
 end)
 textbutton11.Parent = frame
 textbutton11.Text = ""

@@ -14,6 +14,7 @@ local textbutton8 = Instance.new("TextButton")
 local textbutton9 = Instance.new("TextButton")
 local textbutton10 = Instance.new("TextButton")
 local textbutton11 = Instance.new("TextButton")
+local textbutton12 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -184,5 +185,40 @@ for _, a in pairs(workspace:GetDescendants()) do
 if a:IsA("BasePart") then
 a.Anchored = false
 end
+end
+end)
+textbutton12.Parent = frame
+textbutton12.Text = "part rain"
+textbutton12.Position = UDim2.new(0.88, 0.01, 0.15)
+textbutton12.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton12.MouseButton1Click:Connect(function()
+local name = p
+local positionY = game.Players[name].Character.HumanoidRootPart.CFrame.Y + 30
+while true do
+local a = math.random(-500, 500)
+local b = math.random(-500, 500)
+local part = Instance.new("Part")
+part.Anchored = false
+part.Parent = workspace
+part.CFrame = CFrame.new(a, positionY, b)
+task.wait(0.1)
+end
+while true do
+local a = math.random(-1000, 1000)
+local b = math.random(-1000, 1000)
+local part = Instance.new("Part")
+part.Anchored = false
+part.Parent = workspace
+part.CFrame = CFrame.new(a, positionY, b)
+task.wait(0.1)
+end
+while true do
+local a = math.random(-1000, 1000)
+local b = math.random(-1000, 1000)
+local part = Instance.new("Part")
+part.Anchored = false
+part.Parent = workspace
+part.CFrame = CFrame.new(a, positionY, b)
+task.wait(0.1)
 end
 end)

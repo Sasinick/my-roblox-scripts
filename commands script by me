@@ -270,5 +270,7 @@ task.wait(0.1)
 workspace[playername]["Spray"].Parent = workspace
 end
 end
-end
-end)
+if inputText == ";if sit then jump" then
+while true do
+task.wait(0.1)
+if game.Players.LocalPlayer.Character.Humanoid.Sit == true then

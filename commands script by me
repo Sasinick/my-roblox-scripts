@@ -274,6 +274,7 @@ if inputText == ";if sit then jump" then
 while true do
 task.wait(0.1)
 if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
 end
 end

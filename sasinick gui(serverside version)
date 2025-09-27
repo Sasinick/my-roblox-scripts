@@ -1,4 +1,4 @@
-local p = "sasinick1"
+local p = "sasinick2"
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")
@@ -15,6 +15,7 @@ local textbutton9 = Instance.new("TextButton")
 local textbutton10 = Instance.new("TextButton")
 local textbutton11 = Instance.new("TextButton")
 local textbutton12 = Instance.new("TextButton")
+local textbutton13 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -219,6 +220,22 @@ local part = Instance.new("Part")
 part.Anchored = false
 part.Parent = workspace
 part.CFrame = CFrame.new(a, positionY, b)
+task.wait(0.1)
+end
+end)
+textbutton13.Parent = frame
+textbutton13.Text = "loop sit all npcs and players"
+textbutton13.Position = UDim2.new(0.88, 0.01, 0.28)
+textbutton13.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton13.MouseButton1Click:Connect(function()
+while true do
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Model") then
+if a:FindFirstChild("Humanoid") then
+a.Humanoid.Sit = true
+end
+end
+end
 task.wait(0.1)
 end
 end)

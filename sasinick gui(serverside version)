@@ -16,6 +16,7 @@ local textbutton10 = Instance.new("TextButton")
 local textbutton11 = Instance.new("TextButton")
 local textbutton12 = Instance.new("TextButton")
 local textbutton13 = Instance.new("TextButton")
+local textbutton14 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -235,6 +236,21 @@ if a:FindFirstChild("Humanoid") then
 a.Humanoid.Sit = true
 end
 end
+end
+task.wait(0.1)
+end
+end)
+textbutton14.Parent = frame
+textbutton14.Text = "loop unanchored part spawn"
+textbutton14.Position = UDim2.new(0.88, 0.01, 0.40)
+textbutton14.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton14.MouseButton1Click:Connect(function()
+local name = p
+while true do
+if game.Players[name] and game.Players[name].Character.HumanoidRootPart then
+local uapart = Instance.new("Part")
+uapart.Parent = workspace
+uapart.CFrame = game.Players[name].Character.HumanoidRootPart.CFrame
 end
 task.wait(0.1)
 end

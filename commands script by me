@@ -228,7 +228,7 @@ local playerposition = game.Players.LocalPlayer.Character.HumanoidRootPart.CFram
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 task.wait(0.1)
 game.Players.LocalPlayer.Character:PivotTo(playerposition)
-workspace.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0.5, 0, 0)
+workspace.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 0.3, 0)
 task.wait(0.1)
 workspace.Handle.CFrame  = sprayposition
 end
@@ -253,10 +253,13 @@ end
 end
 if inputText == ";free client script executor get spray tool" then
 local spraypart = workspace.Fencing.SprayButton
+local gravity = workspace.Gravity
 local characterposition = game.Players.LocalPlayer.Character:GetPivot()
-game.Players.LocalPlayer.Character:PivotTo(spraypart.CFrame + Vector3.new(0, 1, 0))
-task.wait(0.6)
+workspace.Gravity = 500
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = spraypart.CFrame + Vector3.new(0, 5, 0)
+task.wait(0.3)
 game.Players.LocalPlayer.Character:PivotTo(characterposition)
+workspace.Gravity = gravity
 end
 if inputText == ";free client script executor spray tool drop spam" then
 local spraypart = workspace.Fencing.SprayButton

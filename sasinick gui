@@ -129,7 +129,7 @@ teleporttoplayer(textbox4.Text)
 end)
 textbox5.Parent = frame
 textbox5.Text = "loop teleport to player"
-textbox5.Position = UDim2.new(0.88, 0.01, 0.01)
+textbox5.Position = UDim2.new(0.64, 0.01, 0.01)
 textbox5.Size = UDim2.new(0.16, 0.16, 0.16)
 textbox5.FocusLost:Connect(function()
 function loopteleporttoplayer(player)
@@ -139,4 +139,5 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[player
 task.wait(0.1)
 end
 end
+loopteleporttoplayer(textbox5.Text)
 end)

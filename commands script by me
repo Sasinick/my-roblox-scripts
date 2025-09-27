@@ -257,7 +257,7 @@ local gravity = workspace.Gravity
 local characterposition = game.Players.LocalPlayer.Character:GetPivot()
 workspace.Gravity = 500
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = spraypart.CFrame + Vector3.new(0, 5, 0)
-task.wait(0.3)
+task.wait(0.4)
 game.Players.LocalPlayer.Character:PivotTo(characterposition)
 workspace.Gravity = gravity
 end

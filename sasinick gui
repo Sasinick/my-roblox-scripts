@@ -12,7 +12,7 @@ local textbutton6 = Instance.new("TextButton")
 local textbutton7 = Instance.new("TextButton")
 local textbutton8 = Instance.new("TextButton")
 local textbutton9 = Instance.new("TextButton")
-local textbutton10 = Instance.new("TextButton")
+local textbox4 = Instance.new("TextBox")
 local textbutton11 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
@@ -29,15 +29,20 @@ textbox1.Text = "walkspeed"
 textbox1.Position = UDim2.new(0.004, 0.1, 0.15)
 textbox1.Size = UDim2.new(0.16, 0.16, 0.16)
 textbox1.FocusLost:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = textbox1.Text
+function walkspeedchange(walkspeed)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = walkspeed
+end
+walkspeedchange(textbox1.Text)
 end)
 textbox2.Parent = frame
 textbox2.Text = "jumppower"
 textbox2.Position = UDim2.new(0.004, 0.1, 0.27)
 textbox2.Size = UDim2.new(0.16, 0.16, 0.16)
 textbox2.FocusLost:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = textbox2.Text
+function jumppowerchange(jumppower)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = jumppower
+end
+jumppowerchange(textbox2.Text)
 end)
 textbox3.Parent = frame
 textbox3.Text = "gravity"
@@ -54,75 +59,55 @@ textbutton4.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
 textbutton6.Parent = frame
-textbutton6.Text = "loop all players guis delete"
+textbutton6.Text = "noclip"
 textbutton6.Position = UDim2.new(0.004, 0.1, 0.64)
 textbutton6.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton6.MouseButton1Click:Connect(function()
-for _, a in pairs(game.Players:GetPlayers()) do
-if a:FindFirstChild("PlayerGui") then
-a.PlayerGui:Destroy()
+for _, a in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = false
 end
 end
-game.Players.PlayerAdded:Connect(function(player)
-task.wait(1)
-for _, a in pairs(game.Players:GetPlayers()) do
-if a:FindFirstChild("PlayerGui") then
-a.PlayerGui:Destroy()
-end
-end
-end)
 end)
 textbutton7.Parent = frame
-textbutton7.Text = "all parts color random"
+textbutton7.Text = "respawn"
 textbutton7.Position = UDim2.new(0.004, 0.1, 0.76)
 textbutton7.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton7.MouseButton1Click:Connect(function()
-for _, part in pairs(workspace:GetDescendants()) do
-if part:IsA("BasePart") then
-local color1 = math.random()
-local color2 = math.random()
-local color3 = math.random()
-part.Color = Color3.new(color1, color2, color3)
-end
-end
+local pos = game.Players.LocalPlayer.Character:GetPivot()
+local respawntime = game.Players.RespawnTime
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+task.wait(respawntime + 0.6)
+game.Players.LocalPlayer.Character:PivotTo(pos)
 end)
 textbutton8.Parent = frame
-textbutton8.Text = "loop all parts color random"
+textbutton8.Text = "teleport to spawn location"
 textbutton8.Position = UDim2.new(0.004, 0.1, 0.88)
 textbutton8.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton8.MouseButton1Click:Connect(function()
-while true do
-for _, part in pairs(workspace:GetDescendants()) do
-if part:IsA("BasePart") then
-local color1 = math.random()
-local color2 = math.random()
-local color3 = math.random()
-part.Color = Color3.new(color1, color2, color3)
+for _, a in pairs(workspace:GetDescendants()) do
+if a.Name == "SpawnLocation" then
+game.Players.LocalPlayer.Character:PivotTo(a.CFrame)
 end
-end
-task.wait(0.1)
 end
 end)
 textbutton9.Parent = frame
-textbutton9.Text = "kick all players"
-textbutton9.Position = UDim2.new(0.25, 0.01, 0.01)
+textbutton9.Text = "jump"
+textbutton9.Position = UDim2.new(0.20, 0.01, 0.01)
 textbutton9.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton9.MouseButton1Click:Connect(function()
-for _, a in pairs(game.Players:GetPlayers()) do
-a:Destroy()
-end
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end)
-textbutton10.Parent = frame
-textbutton10.Text = "delete all players character"
-textbutton10.Position = UDim2.new(0.53, 0.01, 0.01)
-textbutton10.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton10.MouseButton1Click:Connect(function()
-for _, a in pairs(game.Players:GetPlayers()) do
-a.Character:Destroy()
-end
+textbox4.Parent = frame
+textbox4.Text = "teleport to player"
+textbox4.Position = UDim2.new(0.39, 0.01, 0.01)
+textbox4.Size = UDim2.new(0.16, 0.16, 0.16)
+textbox4.FocusLost:Connect(function()
+local character = game.Players.LocalPlayer.Character
+character.HumanoidRootPart.CFrame = game.Players[textbox4.Text].Character.HumanoidRootPart.CFrame
 end)
 textbutton11.Parent = frame
-textbutton11.Text = "all parts anchored = false"
+textbutton11.Text = ""
 textbutton11.Position = UDim2.new(0.88, 0.01, 0.01)
 textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton11.MouseButton1Click:Connect(function()

@@ -128,13 +128,15 @@ end
 teleporttoplayer(textbox4.Text)
 end)
 textbutton11.Parent = frame
-textbutton11.Text = ""
+textbutton11.Text = "loop teleport to player"
 textbutton11.Position = UDim2.new(0.88, 0.01, 0.01)
 textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton11.MouseButton1Click:Connect(function()
-for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("BasePart") then
-a.Anchored = false
+function loopteleporttoplayer(player)
+getgenv().a = true
+while a do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[player].Character.HumanoidRootPart.CFrame
+task.wait(0.1)
 end
 end
 end)

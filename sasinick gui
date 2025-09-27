@@ -1,4 +1,4 @@
-function sasinickgui()
+
 local p = game.Players.LocalPlayer.Name
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
@@ -14,7 +14,7 @@ local textbutton7 = Instance.new("TextButton")
 local textbutton8 = Instance.new("TextButton")
 local textbutton9 = Instance.new("TextButton")
 local textbox4 = Instance.new("TextBox")
-local textbutton11 = Instance.new("TextButton")
+local textbox5 = Instance.new("TextBox")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -127,18 +127,16 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[player
 end
 teleporttoplayer(textbox4.Text)
 end)
-textbutton11.Parent = frame
-textbutton11.Text = "loop teleport to player"
-textbutton11.Position = UDim2.new(0.88, 0.01, 0.01)
-textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton11.MouseButton1Click:Connect(function()
+textbox5.Parent = frame
+textbox5.Text = "loop teleport to player"
+textbox5.Position = UDim2.new(0.88, 0.01, 0.01)
+textbox5.Size = UDim2.new(0.16, 0.16, 0.16)
+textbox5.FocusLost:Connect(function()
 function loopteleporttoplayer(player)
-getgenv().a = true
+local a = true
 while a do
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[player].Character.HumanoidRootPart.CFrame
 task.wait(0.1)
 end
 end
 end)
-end
-sasinickgui()

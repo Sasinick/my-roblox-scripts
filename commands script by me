@@ -281,5 +281,12 @@ game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
 end
 end
+if inputText == ";teleport to drop tool" then
+for _, droptool in pairs(workspace:GetChildren()) do
+if droptool:IsA("Tool") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = droptool.Handle.CFrame
+end
+end
+end
 end
 end)

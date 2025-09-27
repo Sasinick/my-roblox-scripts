@@ -1,0 +1,22 @@
+local d = game.Players.LocalPlayer.Name
+for _, a in pairs(workspace[d]:GetDescendants()) do
+	if a:IsA("Accessory") then
+		if a:FindFirstChild("Handle") then
+			local handle = a.Handle
+			if handle:FindFirstChild("AccessoryWeld") then
+				handle.AccessoryWeld:Destroy()
+				end
+				handle.CanCollide = false
+				local bodyPosition = Instance.new("BodyPosition")
+				bodyPosition.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+				bodyPosition.D = 1000
+				bodyPosition.P = 10000
+				bodyPosition.Parent = handle
+game:GetService("RunService").Stepped:Connect(function()
+local mouse = game.Players.LocalPlayer:GetMouse()
+local pos = mouse.Hit.p
+bodyPosition.Position = pos
+end)
+end
+			end
+		end

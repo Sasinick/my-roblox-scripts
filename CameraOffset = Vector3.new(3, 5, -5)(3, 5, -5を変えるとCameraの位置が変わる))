@@ -1,1 +1,2 @@
 game.Players.LocalPlayer.Character.Humanoid.CameraOffset = Vector3.new(3, 5, -5)
+print(game.Players.LocalPlayer.Character.Humanoid.CameraOffset)

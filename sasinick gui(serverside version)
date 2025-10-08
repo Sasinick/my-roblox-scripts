@@ -1,4 +1,4 @@
-local p = "sasinick2"
+local p = "beekon1066"
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")
@@ -17,6 +17,8 @@ local textbutton11 = Instance.new("TextButton")
 local textbutton12 = Instance.new("TextButton")
 local textbutton13 = Instance.new("TextButton")
 local textbutton14 = Instance.new("TextButton")
+local textbutton15 = Instance.new("TextButton")
+local textbutton16 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players[p].PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -253,5 +255,32 @@ uapart.Parent = workspace
 uapart.CFrame = game.Players[name].Character.HumanoidRootPart.CFrame
 end
 task.wait(0.1)
+end
+end)
+textbutton15.Parent = frame
+textbutton15.Text = "loop anchored part spawn"
+textbutton15.Position = UDim2.new(0.88, 0.01, 0.54)
+textbutton15.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton15.MouseButton1Click:Connect(function()
+local name = p
+while true do
+if game.Players[name] and game.Players[name].Character.HumanoidRootPart then
+local uapart = Instance.new("Part")
+uapart.Parent = workspace
+uapart.Anchored = true
+uapart.CFrame = game.Players[name].Character.HumanoidRootPart.CFrame
+end
+task.wait(0.1)
+end
+end)
+textbutton16.Parent = frame
+textbutton16.Text = "all parts anchored = true"
+textbutton16.Position = UDim2.new(0.88, 0.01, 0.68)
+textbutton16.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton16.MouseButton1Click:Connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.Anchored = true
+end
 end
 end)

@@ -72,23 +72,20 @@ textbutton8.Text = "clicktoteleporttool"
 textbutton8.Position = UDim2.new(0.004, 0.1, 0.88)
 textbutton8.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton8.MouseButton1Click:Connect(function()
+function createtool()
 local tool = Instance.new("Tool")
-local player = game.Players.LocalPlayer
-local mouse = player:GetMouse()
 tool.Name = "clicktoteleporttool"
 tool.RequiresHandle = false
+tool.CanBeDropped = false
 tool.Parent = game.Players.LocalPlayer.Backpack
-tool.Equipped:Connect(function()
-mouse.Button1Down:Connect(function()
-if mouse.Target then
-local character = player.Character
-if character and character:FindFirstChild("HumanoidRootPart") then
-local targetPosition = mouse.Hit.Position + Vector3.new(0, 5, 0)
-character:MoveTo(targetPosition)
-end
-end
+tool.Activated:Connect(function()
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+local targetpos = mouse.Hit.p
+player.Character:MoveTo(targetpos)
 end)
-end)
+end
+createtool()
 end)
 textbutton9.Parent = frame
 textbutton9.Text = "kick all players"

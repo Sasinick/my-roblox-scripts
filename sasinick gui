@@ -8,7 +8,7 @@ local textbutton3 = Instance.new("TextButton")
 local textbutton4 = Instance.new("TextBox")
 local textbutton5 = Instance.new("TextButton")
 local textbutton6 = Instance.new("TextButton")
-local textbutton7 = Instance.new("TextButton")
+local textbutton7 = Instance.new("TextBox")
 local textbutton8 = Instance.new("TextButton")
 local textbutton9 = Instance.new("TextButton")
 local textbutton10 = Instance.new("TextButton")
@@ -57,16 +57,13 @@ textbutton4.FocusLost:Connect(function()
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = textbutton4.Text
 end)
 textbutton7.Parent = frame
-textbutton7.Text = "all parts color random"
+textbutton7.Text = "transpanrecy"
 textbutton7.Position = UDim2.new(0.004, 0.1, 0.76)
 textbutton7.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton7.MouseButton1Click:Connect(function()
-for _, part in pairs(workspace:GetDescendants()) do
-if part:IsA("BasePart") then
-local color1 = math.random()
-local color2 = math.random()
-local color3 = math.random()
-part.Color = Color3.new(color1, color2, color3)
+textbutton7.FocusLost:Connect(function()
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("BasePart") then
+a.Transparency = textbutton7.Text
 end
 end
 end)

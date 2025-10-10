@@ -68,20 +68,26 @@ end
 end
 end)
 textbutton8.Parent = frame
-textbutton8.Text = "teleporttool"
+textbutton8.Text = "clicktoteleporttool"
 textbutton8.Position = UDim2.new(0.004, 0.1, 0.88)
 textbutton8.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton8.MouseButton1Click:Connect(function()
 local tool = Instance.new("Tool")
-local mouse = game.Players.LocalPlayer:GetMouse()
-tool.Name = "teleportool"
-tool.RequiresHandle = true
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+tool.Name = "clicktoteleporttool"
+tool.RequiresHandle = false
 tool.Parent = game.Players.LocalPlayer.Backpack
-tool.Activated:Connect(function()
-local targetpos = mouse.Hit.p
-local char = game.Players.LocalPLayer.Character
-local hrp = char.HumanoidRootPart
-hrp.CFrame = CFrame.new(targetpos + Vector3.new(0, 5, 0))
+tool.Equipped:Connect(function()
+mouse.Button1Down:Connect(function()
+if mouse.Target then
+local character = player.Character
+if character and character:FindFirstChild("HumanoidRootPart") then
+local targetPosition = mouse.Hit.Position + Vector3.new(0, 5, 0)
+character:MoveTo(targetPosition)
+end
+end
+end)
 end)
 end)
 textbutton9.Parent = frame

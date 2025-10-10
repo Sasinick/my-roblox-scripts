@@ -39,7 +39,7 @@ textbutton2.Text = "jumppower"
 textbutton2.Position = UDim2.new(0.004, 0.1, 0.27)
 textbutton2.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton2.FocusLost:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.= true
+game.Players.LocalPlayer.Character.Humanoid.UseJumpPower = true
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = textbutton2.Text
 end)
 textbutton3.Parent = frame

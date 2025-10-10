@@ -68,21 +68,21 @@ end
 end
 end)
 textbutton8.Parent = frame
-textbutton8.Text = "loop all parts color random"
+textbutton8.Text = "teleporttool"
 textbutton8.Position = UDim2.new(0.004, 0.1, 0.88)
 textbutton8.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton8.MouseButton1Click:Connect(function()
-while true do
-for _, part in pairs(workspace:GetDescendants()) do
-if part:IsA("BasePart") then
-local color1 = math.random()
-local color2 = math.random()
-local color3 = math.random()
-part.Color = Color3.new(color1, color2, color3)
-end
-end
-task.wait(0.1)
-end
+local tool = Instance.new("Tool")
+local mouse = game.Players.LocalPlayer:GetMouse()
+tool.Name = "teleportool"
+tool.RequiresHandle = true
+tool.Parent = game.Players.LocalPlayer.Backpack
+tool.Activated:Connect(function()
+local targetpos = mouse.Hit.p
+local char = game.Players.LocalPLayer.Character
+local hrp = char.HumanoidRootPart
+hrp.CFrame = CFrame.new(targetpos + Vector3.new(0, 5, 0))
+end)
 end)
 textbutton9.Parent = frame
 textbutton9.Text = "kick all players"

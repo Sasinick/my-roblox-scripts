@@ -43,7 +43,7 @@ local textbutton19 = Instance.new("TextButton")
 local textbutton20 = Instance.new("TextButton")
 local textbutton21 = Instance.new("TextButton")
 local textbutton22 = Instance.new("TextBox")
-local textbutton23 = Instance.new("TextButton")
+local textbutton23 = Instance.new("TextBox")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -232,14 +232,9 @@ textbutton22.FocusLost:Connect(function()
 workspace.Gravity = textbutton22.Text
 end)
 textbutton23.Parent = frame
-textbutton23.Text = "fly"
+textbutton23.Text = "vector3 Y"
 textbutton23.Position = UDim2.new(0.69, 0.01, 0.38)
 textbutton23.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton23.MouseButton1Click:Connect(function()
-part.CanCollide = true
-uis.InputBegan:Connect(function(input, gameProcessed)
-if input.KeyCode == Enum.KeyCode.E then
-part.CFrame = rootpart.CFrame + Vector3.new(0, 2, 0)
-end
-end)
+textbutton23.FocusLost:Connect(function()
+rootpart.CFrame = rootpart.CFrame + Vector3.new(0, textbutton23.Text, 0)
 end)

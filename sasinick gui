@@ -107,14 +107,14 @@ end
 end)
 textbutton10.Parent = frame
 textbutton10.Text = "save pos"
-textbutton10.Position = UDim2.new(0.53, 0.01, 0.01)
+textbutton10.Position = UDim2.new(0.46, 0.01, 0.01)
 textbutton10.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton10.MouseButton1Click:Connect(function()
 pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 textbutton11.Parent = frame
 textbutton11.Text = "load pos"
-textbutton11.Position = UDim2.new(0.88, 0.01, 0.01)
+textbutton11.Position = UDim2.new(0.60, 0.01, 0.01)
 textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton11.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos

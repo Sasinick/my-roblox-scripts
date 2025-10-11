@@ -141,18 +141,12 @@ textbutton14.FocusLost:Connect(function()
 workspace.Camera.FieldOfView = textbutton14.Text
 end)
 textbutton15.Parent = frame
-textbutton15.Text = ""
+textbutton15.Text = "print touched part path"
 textbutton15.Position = UDim2.new(0.88, 0.01, 0.54)
 textbutton15.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton15.MouseButton1Click:Connect(function()
-local name = p
-while true do
-if game.Players[name] and game.Players[name].Character.HumanoidRootPart then
-local uapart = Instance.new("Part")
-uapart.Parent = workspace
-uapart.Anchored = true
-uapart.CFrame = game.Players[name].Character.HumanoidRootPart.CFrame
+local function onPartTouched(object)
+print(object:GetFullName())
 end
-task.wait(0.1)
-end
+game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(onPartTouched)
 end)

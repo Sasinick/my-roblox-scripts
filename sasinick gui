@@ -240,8 +240,8 @@ if input.KeyCode == Enum.KeyCode.Q then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -2, 0)
 end
 if input.KeyCode == Enum.KeyCode.W then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(newPosition, newPosition + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(newposition, newposition + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector)
 end
 end
-uis.InputBegan:Connect(onKeyPress)
+uis.InputBegan:Connect(onkeypress)
 end)

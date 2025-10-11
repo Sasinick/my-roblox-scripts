@@ -1,3 +1,4 @@
+local uis = game:GetService("UserInputService")
 local pos = nil
 local textbutton9text = [[noclip and 
 anti fling
@@ -33,6 +34,7 @@ local textbutton19 = Instance.new("TextButton")
 local textbutton20 = Instance.new("TextButton")
 local textbutton21 = Instance.new("TextButton")
 local textbutton22 = Instance.new("TextBox")
+local textbutton23 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -184,7 +186,7 @@ textbutton18.Text = "infinite jump"
 textbutton18.Position = UDim2.new(0.88, 0.01, 0.66)
 textbutton18.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton18.MouseButton1Click:Connect(function()
-game:GetService("UserInputService").JumpRequest:Connect(function()
+uis.JumpRequest:Connect(function()
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end)
 end)
@@ -219,4 +221,26 @@ textbutton22.Position = UDim2.new(0.69, 0.01, 0.54)
 textbutton22.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton22.FocusLost:Connect(function()
 workspace.Gravity = textbutton22.Text
+end)
+textbutton23.Parent = frame
+textbutton23.Text = "fly"
+textbutton23.Position = UDim2.new(0.69, 0.01, 0.38)
+textbutton23.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton23.MouseButton1Click:Connect(function()
+workspace.Gravity = 0
+for _, part in pairs(workspace:GetDescendants()) do
+if part:IsA("BasePart") then
+part.CanCollide = false
+end
+end
+local function onkeypress(input, gameprocessed)
+if gameprocessed then return end
+if input.KeyCode == Enum.KeyCode.E then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 2, 0)
+end
+if input.KeyCode == Enum.KeyCode.Q then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -2, 0)
+end
+end
+uis.InputBegan:Connect(onkeypress)
 end)

@@ -1,5 +1,6 @@
 local uis = game:GetService("UserInputService")
 local pos = nil
+local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
 local textbutton9text = [[noclip and 
 anti fling
 ]]
@@ -227,12 +228,9 @@ textbutton23.Text = "fly"
 textbutton23.Position = UDim2.new(0.69, 0.01, 0.38)
 textbutton23.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton23.MouseButton1Click:Connect(function()
+local forward = rootpart.CFrame.LookVector
+local netposition = rootpart.Position + (forward * 5)
 workspace.Gravity = 0
-for _, part in pairs(workspace:GetDescendants()) do
-if part:IsA("BasePart") then
-part.CanCollide = false
-end
-end
 local function onkeypress(input, gameprocessed)
 if gameprocessed then return end
 if input.KeyCode == Enum.KeyCode.E then
@@ -241,6 +239,9 @@ end
 if input.KeyCode == Enum.KeyCode.Q then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -2, 0)
 end
+if input.KeyCode == Enum.KeyCode.W then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(newPosition, newPosition + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector)
 end
-uis.InputBegan:Connect(onkeypress)
+end
+uis.InputBegan:Connect(onKeyPress)
 end)

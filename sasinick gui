@@ -141,7 +141,7 @@ textbutton14.FocusLost:Connect(function()
 workspace.Camera.FieldOfView = textbutton14.Text
 end)
 textbutton15.Parent = frame
-textbutton15.Text = "loop anchored part spawn"
+textbutton15.Text = ""
 textbutton15.Position = UDim2.new(0.88, 0.01, 0.54)
 textbutton15.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton15.MouseButton1Click:Connect(function()

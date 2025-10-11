@@ -131,7 +131,7 @@ textbutton13.Text = "view player"
 textbutton13.Position = UDim2.new(0.88, 0.01, 0.15)
 textbutton13.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton13.FocusLost:Connect(function()
-workspace.Camera.
+workspace.Camera.CameraSubject = game.Players[textbutton13.Text].Character.HumanoidRootPart
 end)
 textbutton14.Parent = frame
 textbutton14.Text = "loop unanchored part spawn"

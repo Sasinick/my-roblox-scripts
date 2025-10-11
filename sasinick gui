@@ -5,8 +5,8 @@ that can drop
 local textbutton9text = [[noclip and 
 anti fling
 ]]
-local textbutton10text = [[location
-save
+local textbutton10text = [[locatio
+n save
 ]]
 local playername = game.Players.LocalPlayer.Name
 local respawntime = game.Players.RespawnTime
@@ -132,7 +132,7 @@ pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 textbutton11.Parent = frame
 textbutton11.Text = "location load"
-textbutton11.Position = UDim2.new(0.60, 0.01, 0.01)
+textbutton11.Position = UDim2.new(0.50, 0.01, 0.01)
 textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton11.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos

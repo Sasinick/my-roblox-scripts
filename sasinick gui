@@ -44,6 +44,7 @@ local textbutton20 = Instance.new("TextButton")
 local textbutton21 = Instance.new("TextButton")
 local textbutton22 = Instance.new("TextBox")
 local textbutton23 = Instance.new("TextBox")
+local textbutton24 = Instance.new("TextBox")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -238,4 +239,12 @@ textbutton23.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton23.FocusLost:Connect(function()
 local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
 rootpart.CFrame = rootpart.CFrame + Vector3.new(0, textbutton23.Text, 0)
+end)
+textbutton24.Parent = frame
+textbutton24.Text = "vector3 Z"
+textbutton24.Position = UDim2.new(0.69, 0.01, 0.25)
+textbutton24.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton24.FocusLost:Connect(function()
+local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+rootpart.CFrame = rootpart.CFrame + Vector3.new(textbutton24.Text, 0, 0)
 end)

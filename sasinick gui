@@ -105,27 +105,21 @@ end
 end
 end)
 textbutton10.Parent = frame
-textbutton10.Text = "delete all players character"
+textbutton10.Text = "save pos"
 textbutton10.Position = UDim2.new(0.53, 0.01, 0.01)
 textbutton10.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton10.MouseButton1Click:Connect(function()
-for _, a in pairs(game.Players:GetPlayers()) do
-a.Character:Destroy()
-end
+local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 textbutton11.Parent = frame
-textbutton11.Text = "all parts anchored = false"
+textbutton11.Text = "load pos"
 textbutton11.Position = UDim2.new(0.88, 0.01, 0.01)
 textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton11.MouseButton1Click:Connect(function()
-for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("BasePart") then
-a.Anchored = false
-end
-end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 textbutton12.Parent = frame
-textbutton12.Text = "part rain"
+textbutton12.Text = "load pos"
 textbutton12.Position = UDim2.new(0.88, 0.01, 0.15)
 textbutton12.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton12.MouseButton1Click:Connect(function()

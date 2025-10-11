@@ -22,6 +22,7 @@ local textbutton15 = Instance.new("TextButton")
 local textbutton16 = Instance.new("TextButton")
 local textbutton17 = Instance.new("TextButton")
 local textbutton18 = Instance.new("TextButton")
+local textbutton19 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -176,4 +177,11 @@ textbutton18.MouseButton1Click:Connect(function()
 game:GetService("UserInputService").JumpRequest:Connect(function()
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end)
+end)
+textbutton19.Parent = frame
+textbutton19.Text = "character freeze"
+textbutton19.Position = UDim2.new(0.69, 0.01, 0.84)
+textbutton19.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton19.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
 end)

@@ -141,12 +141,9 @@ textbutton14.FocusLost:Connect(function()
 workspace.Camera.FieldOfView = textbutton14.Text
 end)
 textbutton15.Parent = frame
-textbutton15.Text = "print touched part path"
-textbutton15.Position = UDim2.new(0.88, 0.01, 0.54)
+textbutton15.Text = "animation freeze"
+textbutton15.Position = UDim2.new(0.88, 0.01, 0.47)
 textbutton15.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton15.MouseButton1Click:Connect(function()
-local function onPartTouched(object)
-print(object:GetFullName())
-end
-game.Players.LocalPlayer.Character.HumanoidRootPart.Touched:Connect(onPartTouched)
+game.Players.LocalPlayer.Character.Animate:Destroy()
 end)

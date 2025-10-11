@@ -1,4 +1,6 @@
 local uis = game:GetService("UserInputService")
+local E = nil
+local Q = nil
 local pos = nil
 local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
 local textbutton9text = [[noclip and 
@@ -8,6 +10,12 @@ local textbutton10text = [[locatio
 n save
 ]]
 local playername = game.Players.LocalPlayer.Name
+local part = Instance.new("Part")
+part.Anchored = true
+part.Transparency = 1
+part.Parent = workspace
+part.CanCollide = false
+part.CFrame = rootpart.CFrame
 local respawntime = game.Players.RespawnTime
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
@@ -228,20 +236,10 @@ textbutton23.Text = "fly"
 textbutton23.Position = UDim2.new(0.69, 0.01, 0.38)
 textbutton23.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton23.MouseButton1Click:Connect(function()
-local forward = rootpart.CFrame.LookVector
-local netposition = rootpart.Position + (forward * 5)
-workspace.Gravity = 0
-local function onkeypress(input, gameprocessed)
-if gameprocessed then return end
+part.CanCollide = true
+uis.InputBegan:Connect(function(input, gameProcessed)
 if input.KeyCode == Enum.KeyCode.E then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, 2, 0)
+part.CFrame = rootpart.CFrame + Vector3.new(0, 2, 0)
 end
-if input.KeyCode == Enum.KeyCode.Q then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0, -2, 0)
-end
-if input.KeyCode == Enum.KeyCode.W then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(newposition, newposition + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector)
-end
-end
-uis.InputBegan:Connect(onkeypress)
+end)
 end)

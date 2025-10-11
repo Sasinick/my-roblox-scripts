@@ -16,7 +16,7 @@ local textbutton10 = Instance.new("TextButton")
 local textbutton11 = Instance.new("TextButton")
 local textbutton12 = Instance.new("TextBox")
 local textbutton13 = Instance.new("TextBox")
-local textbutton14 = Instance.new("TextButton")
+local textbutton14 = Instance.new("TextBox")
 local textbutton15 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
@@ -134,19 +134,11 @@ textbutton13.FocusLost:Connect(function()
 workspace.Camera.CameraSubject = game.Players[textbutton13.Text].Character.HumanoidRootPart
 end)
 textbutton14.Parent = frame
-textbutton14.Text = "loop unanchored part spawn"
-textbutton14.Position = UDim2.new(0.88, 0.01, 0.40)
+textbutton14.Text = "fov"
+textbutton14.Position = UDim2.new(0.88, 0.01, 0.30)
 textbutton14.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton14.MouseButton1Click:Connect(function()
-local name = p
-while true do
-if game.Players[name] and game.Players[name].Character.HumanoidRootPart then
-local uapart = Instance.new("Part")
-uapart.Parent = workspace
-uapart.CFrame = game.Players[name].Character.HumanoidRootPart.CFrame
-end
-task.wait(0.1)
-end
+textbutton14.FocusLost:Connect(function()
+workspace.Camera.FieldOfView = textbutton14.Text
 end)
 textbutton15.Parent = frame
 textbutton15.Text = "loop anchored part spawn"

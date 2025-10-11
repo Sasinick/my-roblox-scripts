@@ -91,7 +91,7 @@ textbutton4.FocusLost:Connect(function()
 game.Players.LocalPlayer.Character.Humanoid.HipHeight = textbutton4.Text
 end)
 textbutton7.Parent = frame
-textbutton7.Text = "transparency"
+textbutton7.Text = "all parts transparency"
 textbutton7.Position = UDim2.new(0.004, 0.1, 0.76)
 textbutton7.Size = UDim2.new(0.17, 0.16, 0.16)
 textbutton7.FocusLost:Connect(function()

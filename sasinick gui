@@ -15,7 +15,7 @@ local textbutton9 = Instance.new("TextButton")
 local textbutton10 = Instance.new("TextButton")
 local textbutton11 = Instance.new("TextButton")
 local textbutton12 = Instance.new("TextBox")
-local textbutton13 = Instance.new("TextButton")
+local textbutton13 = Instance.new("TextBox")
 local textbutton14 = Instance.new("TextButton")
 local textbutton15 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
@@ -130,17 +130,8 @@ textbutton13.Parent = frame
 textbutton13.Text = "view player"
 textbutton13.Position = UDim2.new(0.88, 0.01, 0.15)
 textbutton13.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton13.MouseButton1Click:Connect(function()
-while true do
-for _, a in pairs(workspace:GetDescendants()) do
-if a:IsA("Model") then
-if a:FindFirstChild("Humanoid") then
-a.Humanoid.Sit = true
-end
-end
-end
-task.wait(0.1)
-end
+textbutton13.FocusLost:Connect(function()
+workspace.Camera.
 end)
 textbutton14.Parent = frame
 textbutton14.Text = "loop unanchored part spawn"

@@ -236,5 +236,6 @@ textbutton23.Text = "vector3 Y"
 textbutton23.Position = UDim2.new(0.69, 0.01, 0.38)
 textbutton23.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton23.FocusLost:Connect(function()
+local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
 rootpart.CFrame = rootpart.CFrame + Vector3.new(0, textbutton23.Text, 0)
 end)

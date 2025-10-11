@@ -1,4 +1,5 @@
 local pos = nil
+local playername = game.Players.LocalPlayer.Name
 local respawntime = game.Players.RespawnTime
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
@@ -195,4 +196,13 @@ textbutton20.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
 textbutton21.Parent = frame
-textbutton21.Text = ""
+textbutton21.Text = "equip all tools"
+textbutton21.Position = UDim2.new(0.69, 0.01, 0.60)
+textbutton21.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton21.MouseButton1Click:Connect(function()
+for _, tools in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+if tool:IsA("Tool") then
+tool.Parent = workspace[playername]
+end
+end
+end)

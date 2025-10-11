@@ -24,6 +24,7 @@ local textbutton17 = Instance.new("TextButton")
 local textbutton18 = Instance.new("TextButton")
 local textbutton19 = Instance.new("TextButton")
 local textbutton20 = Instance.new("TextButton")
+local textbutton21 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -101,7 +102,7 @@ end
 createtool()
 end)
 textbutton9.Parent = frame
-textbutton9.Text = "noclip and anti fling"
+textbutton9.Text = "location load"
 textbutton9.Position = UDim2.new(0.25, 0.01, 0.01)
 textbutton9.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton9.MouseButton1Click:Connect(function()
@@ -112,14 +113,14 @@ end
 end
 end)
 textbutton10.Parent = frame
-textbutton10.Text = "save pos"
+textbutton10.Text = "location save"
 textbutton10.Position = UDim2.new(0.46, 0.01, 0.01)
 textbutton10.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton10.MouseButton1Click:Connect(function()
 pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 textbutton11.Parent = frame
-textbutton11.Text = "load pos"
+textbutton11.Text = "location load"
 textbutton11.Position = UDim2.new(0.60, 0.01, 0.01)
 textbutton11.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton11.MouseButton1Click:Connect(function()
@@ -140,7 +141,7 @@ textbutton13.FocusLost:Connect(function()
 workspace.Camera.CameraSubject = game.Players[textbutton13.Text].Character.HumanoidRootPart
 end)
 textbutton14.Parent = frame
-textbutton14.Text = "fov"
+textbutton14.Text = "FOV"
 textbutton14.Position = UDim2.new(0.88, 0.01, 0.30)
 textbutton14.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton14.FocusLost:Connect(function()
@@ -193,3 +194,5 @@ textbutton20.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton20.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
+textbutton21.Parent = frame
+textbutton21.Text = ""

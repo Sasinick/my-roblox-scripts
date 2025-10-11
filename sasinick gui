@@ -121,7 +121,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 textbutton12.Parent = frame
 textbutton12.Text = "teleport to player"
-textbutton12.Position = UDim2.new(0.88, 0.01, 0.15)
+textbutton12.Position = UDim2.new(0.78, 0.01, 0.01)
 textbutton12.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton12.FocusLost:Connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[textbutton12.Text].Character.HumanoidRootPart.CFrame

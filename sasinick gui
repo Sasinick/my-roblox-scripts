@@ -94,12 +94,14 @@ end
 createtool()
 end)
 textbutton9.Parent = frame
-textbutton9.Text = "kick all players"
+textbutton9.Text = "noclip and anti fling"
 textbutton9.Position = UDim2.new(0.25, 0.01, 0.01)
 textbutton9.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton9.MouseButton1Click:Connect(function()
-for _, a in pairs(game.Players:GetPlayers()) do
-a:Destroy()
+for _, a in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = false
+end
 end
 end)
 textbutton10.Parent = frame

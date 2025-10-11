@@ -20,6 +20,7 @@ local textbutton13 = Instance.new("TextBox")
 local textbutton14 = Instance.new("TextBox")
 local textbutton15 = Instance.new("TextButton")
 local textbutton16 = Instance.new("TextButton")
+local textbutton17 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -158,4 +159,11 @@ local pos2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 task.wait(respawntime + 0.5)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos2
+end)
+textbutton17.Parent = frame
+textbutton17.Text = "die"
+textbutton17.Position = UDim2.new(0.88, 0.01, 0.72)
+textbutton17.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton17.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)

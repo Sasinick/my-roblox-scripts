@@ -1,3 +1,4 @@
+local pos = nil
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")
@@ -109,7 +110,7 @@ textbutton10.Text = "save pos"
 textbutton10.Position = UDim2.new(0.53, 0.01, 0.01)
 textbutton10.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton10.MouseButton1Click:Connect(function()
-local pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+pos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 textbutton11.Parent = frame
 textbutton11.Text = "load pos"

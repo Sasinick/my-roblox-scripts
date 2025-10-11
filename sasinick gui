@@ -9,6 +9,9 @@ anti fling
 local textbutton10text = [[locatio
 n save
 ]]
+local textbutton23text = [[drop all droppable
+tools
+]]
 local playername = game.Players.LocalPlayer.Name
 local part = Instance.new("Part")
 part.Anchored = true
@@ -43,7 +46,7 @@ local textbutton19 = Instance.new("TextButton")
 local textbutton20 = Instance.new("TextButton")
 local textbutton21 = Instance.new("TextButton")
 local textbutton22 = Instance.new("TextBox")
-local textbutton23 = Instance.new("TextBox")
+local textbutton23 = Instance.new("TextButton")
 local textbutton24 = Instance.new("TextBox")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
@@ -233,18 +236,18 @@ textbutton22.FocusLost:Connect(function()
 workspace.Gravity = textbutton22.Text
 end)
 textbutton23.Parent = frame
-textbutton23.Text = "vector3 Y"
+textbutton23.Text = textbutton23text
 textbutton23.Position = UDim2.new(0.69, 0.01, 0.38)
 textbutton23.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton23.FocusLost:Connect(function()
-local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
-rootpart.CFrame = rootpart.CFrame + Vector3.new(0, textbutton23.Text, 0)
-end)
-textbutton24.Parent = frame
-textbutton24.Text = "vector3 Z"
-textbutton24.Position = UDim2.new(0.69, 0.01, 0.25)
-textbutton24.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton24.FocusLost:Connect(function()
-local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
-rootpart.CFrame = rootpart.CFrame + Vector3.new(textbutton24.Text, 0, 0)
+textbutton23.MouseButton1Click:Connect(function()
+for _, tools in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+if tools:IsA("Tool") and tools.CanBeDropped ~= false then
+tools.Parent = workspace[playername]
+end
+end
+for _, tools in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if tools:IsA("Tool") and tools.CanBeDropped ~= false then
+tools.Parent = workspace
+end
+end
 end)

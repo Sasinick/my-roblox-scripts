@@ -102,7 +102,7 @@ end
 createtool()
 end)
 textbutton9.Parent = frame
-textbutton9.Text = "location load"
+textbutton9.Text = "noclip and anti fling"
 textbutton9.Position = UDim2.new(0.25, 0.01, 0.01)
 textbutton9.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton9.MouseButton1Click:Connect(function()

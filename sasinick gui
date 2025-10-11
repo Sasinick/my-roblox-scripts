@@ -14,7 +14,7 @@ local textbutton8 = Instance.new("TextButton")
 local textbutton9 = Instance.new("TextButton")
 local textbutton10 = Instance.new("TextButton")
 local textbutton11 = Instance.new("TextButton")
-local textbutton12 = Instance.new("TextButton")
+local textbutton12 = Instance.new("TextBox")
 local textbutton13 = Instance.new("TextButton")
 local textbutton14 = Instance.new("TextButton")
 local textbutton15 = Instance.new("TextButton")
@@ -75,13 +75,13 @@ end
 end
 end)
 textbutton8.Parent = frame
-textbutton8.Text = "clicktoteleporttool"
+textbutton8.Text = "click to teleport tool"
 textbutton8.Position = UDim2.new(0.004, 0.1, 0.88)
 textbutton8.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton8.MouseButton1Click:Connect(function()
 function createtool()
 local tool = Instance.new("Tool")
-tool.Name = "clicktoteleporttool"
+tool.Name = "click to teleport tool"
 tool.RequiresHandle = false
 tool.CanBeDropped = false
 tool.Parent = game.Players.LocalPlayer.Backpack
@@ -120,39 +120,11 @@ textbutton11.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 textbutton12.Parent = frame
-textbutton12.Text = "load pos"
+textbutton12.Text = "teleport to player"
 textbutton12.Position = UDim2.new(0.88, 0.01, 0.15)
 textbutton12.Size = UDim2.new(0.16, 0.16, 0.16)
-textbutton12.MouseButton1Click:Connect(function()
-local name = p
-local positionY = game.Players[name].Character.HumanoidRootPart.CFrame.Y + 30
-while true do
-local a = math.random(-500, 500)
-local b = math.random(-500, 500)
-local part = Instance.new("Part")
-part.Anchored = false
-part.Parent = workspace
-part.CFrame = CFrame.new(a, positionY, b)
-task.wait(0.1)
-end
-while true do
-local a = math.random(-1000, 1000)
-local b = math.random(-1000, 1000)
-local part = Instance.new("Part")
-part.Anchored = false
-part.Parent = workspace
-part.CFrame = CFrame.new(a, positionY, b)
-task.wait(0.1)
-end
-while true do
-local a = math.random(-1000, 1000)
-local b = math.random(-1000, 1000)
-local part = Instance.new("Part")
-part.Anchored = false
-part.Parent = workspace
-part.CFrame = CFrame.new(a, positionY, b)
-task.wait(0.1)
-end
+textbutton12.FocusLost:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[textbutton12.Text].Character.HumanoidRootPart.CFrame
 end)
 textbutton13.Parent = frame
 textbutton13.Text = "loop sit all npcs and players"

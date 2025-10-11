@@ -153,14 +153,14 @@ workspace.Camera.CameraSubject = game.Players[textbutton13.Text].Character.Human
 end)
 textbutton14.Parent = frame
 textbutton14.Text = "FOV"
-textbutton14.Position = UDim2.new(0.88, 0.01, 0.30)
+textbutton14.Position = UDim2.new(0.88, 0.01, 0.12)
 textbutton14.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton14.FocusLost:Connect(function()
 workspace.Camera.FieldOfView = textbutton14.Text
 end)
 textbutton15.Parent = frame
 textbutton15.Text = "animation freeze"
-textbutton15.Position = UDim2.new(0.88, 0.01, 0.47)
+textbutton15.Position = UDim2.new(0.88, 0.01, 0.26)
 textbutton15.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton15.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.Animate:Destroy()

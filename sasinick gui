@@ -1,4 +1,5 @@
 local pos = nil
+local respawntime = game.Players.RespawnTime
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")
@@ -18,6 +19,7 @@ local textbutton12 = Instance.new("TextBox")
 local textbutton13 = Instance.new("TextBox")
 local textbutton14 = Instance.new("TextBox")
 local textbutton15 = Instance.new("TextButton")
+local textbutton16 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -146,4 +148,14 @@ textbutton15.Position = UDim2.new(0.88, 0.01, 0.47)
 textbutton15.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton15.MouseButton1Click:Connect(function()
 game.Players.LocalPlayer.Character.Animate:Destroy()
+end)
+textbutton16.Parent = frame
+textbutton16.Text = "refresh"
+textbutton16.Position = UDim2.new(0.88, 0.01, 0.60)
+textbutton16.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton16.MouseButton1Click:Connect(function()
+local pos2 = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+task.wait(respawntime + 0.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos2
 end)

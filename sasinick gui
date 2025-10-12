@@ -53,7 +53,7 @@ local textbutton20 = Instance.new("TextButton")
 local textbutton21 = Instance.new("TextButton")
 local textbutton22 = Instance.new("TextBox")
 local textbutton23 = Instance.new("TextButton")
-local textbutton24 = Instance.new("TextBox")
+local textbutton24 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -256,4 +256,9 @@ end
 end
 end)
 textbutton24.Parent = frame
-textbutton24.Text = ""
+textbutton24.Text = "uninfinite jump"
+textbutton24.Position = UDim2.new(0.69, 0.01, 0.28)
+textbutton24.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton24.MouseButton1Click:Connect(function()
+infjump = false
+end)

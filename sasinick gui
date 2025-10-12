@@ -63,6 +63,7 @@ local textbutton27 = Instance.new("TextButton")
 local textbutton28 = Instance.new("TextButton")
 local textbutton29 = Instance.new("TextButton")
 local textbutton30 = Instance.new("TextButton")
+local textbutton31 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -331,6 +332,17 @@ droptools.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CF
 task.wait(0.1)
 droptools.Handle.CFrame = droptoolsposition
 end
+end
+end
+end)
+textbutton31.Parent = frame
+textbutton31.Text = "teleport to truss"
+textbutton31.Position = UDim2.new(0.30, 0.01, 0.84)
+textbutton31.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton31.MouseButton1Click:Connect(function()
+for _, truss in pairs(workspace:GetDescendants()) do
+if truss:IsA("TrussPart") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = truss.CFrame
 end
 end
 end)

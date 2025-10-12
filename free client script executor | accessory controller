@@ -17,6 +17,18 @@ end
 if input.KeyCode == Enum.KeyCode.Q then
 handle.Velocity = Vector3.new(0, -3, 0)
 end
+if input.KeyCode == Enum.KeyCode.R then
+handle.Velocity = Vector3.new(3, 0, 0)
+end
+if input.KeyCode == Enum.KeyCode.T then
+handle.Velocity = Vector3.new(-3, 0, 0)
+end
+if input.KeyCode == Enum.KeyCode.Z then
+handle.Velocity = Vector3.new(0, 0, 3)
+end
+if input.KeyCode == Enum.KeyCode.X then
+handle.Velocity = Vector3.new(0, 0, -3)
+end
 end)
 end
 			end

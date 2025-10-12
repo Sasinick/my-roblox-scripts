@@ -1,0 +1,23 @@
+local d = game.Players.LocalPlayer.Name
+local uis = game:GetService("UserInputService")
+workspace.Gravity = 0
+for _, a in pairs(workspace[d]:GetDescendants()) do
+	if a:IsA("Accessory") then
+		if a:FindFirstChild("Handle") then
+			local handle = a.Handle
+			if handle:FindFirstChild("AccessoryWeld") then
+				handle.AccessoryWeld:Destroy()
+				end
+				handle.CanCollide = false
+uis.InputBegan:Connect(function(input, processsed)
+if processed then return end
+if input.KeyCode == Enum.KeyCode.E then
+handle.Velocity = Vector3.new(0, 3, 0)
+end
+if input.KeyCode == Enum.KeyCode.Q then
+handle.Velocity = Vector3.new(0, -3, 0)
+end
+end)
+end
+			end
+		end

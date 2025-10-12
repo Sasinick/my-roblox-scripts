@@ -62,6 +62,7 @@ local textbutton26 = Instance.new("TextButton")
 local textbutton27 = Instance.new("TextButton")
 local textbutton28 = Instance.new("TextButton")
 local textbutton29 = Instance.new("TextButton")
+local textbutton30 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -316,4 +317,20 @@ textbutton29.Position = UDim2.new(0.48, 0.01, 0.72)
 textbutton29.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton29.MouseButton1Click:Connect(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+textbutton30.Parent = frame
+textbutton30.Text = "get drop tools"
+textbutton30.Position = UDim2.new(0.48, 0.01, 0.84)
+textbutton30.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton30.MouseButton1Click:Connect(function()
+for _, droptools in pairs(workspace:GetDescendants()) do
+if droptools:IsA("Tool") then
+if droptools:FindFirstChild("Handle") then
+local droptoolsposition = droptools.Handle.CFrame
+droptools.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+task.wait(0.1)
+droptools.Handle.CFrame = droptoolsposition
+end
+end
+end
 end)

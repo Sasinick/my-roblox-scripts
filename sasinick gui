@@ -306,7 +306,7 @@ textbutton28.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton28.MouseButton1Click:Connect(function()
 for _, spawnlocation in pairs(workspace:GetDescendants()) do
 if spawnlocation:IsA("SpawnLocation") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = spawnlocation.CFrame
 end
 end
 end)

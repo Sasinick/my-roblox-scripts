@@ -11,6 +11,7 @@ local pos = nil
 -- localplayer
 local rootpart = p.LocalPlayer.Character.HumanoidRootPart
 local playername = p.LocalPlayer.Name
+local player = p.LocalPlayer
 -- players
 local respawntime = game.Players.RespawnTime
 -- functions
@@ -359,5 +360,5 @@ textbutton32.Text = "rejoin"
 textbutton32.Position = UDim2.new(0.30, 0.01, 0.72)
 textbutton32.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton32.MouseButton1Click:Connect(function()
-ts:Teleport(game.PlaceId, p)
+ts:Teleport(game.PlaceId, player)
 end)

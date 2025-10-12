@@ -327,10 +327,12 @@ textbutton30.MouseButton1Click:Connect(function()
 for _, droptools in pairs(workspace:GetDescendants()) do
 if droptools:IsA("Tool") then
 if droptools:FindFirstChild("Handle") then
+if droptools.Parent == workspace then
 local droptoolsposition = droptools.Handle.CFrame
 droptools.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 task.wait(0.1)
 droptools.Handle.CFrame = droptoolsposition
+end
 end
 end
 end

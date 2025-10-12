@@ -1,16 +1,25 @@
+-- services
 local uis = game:GetService("UserInputService")
 local ts = game:GetService("TeleportService")
-local p = game.Players.LocalPlayer
-local E = nil
-local Q = nil
-local pos = nil
+local rs = game:GetService("RunService")
+local res = game:GetService("ReplicatedStorage")
+local p = game:GetService("Players")
+-- flags
 local infjump = nil
-local rootpart = game.Players.LocalPlayer.Character.HumanoidRootPart
+-- save the value
+local pos = nil
+-- localplayer
+local rootpart = p.LocalPlayer.Character.HumanoidRootPart
+local playername = p.LocalPlayer.Name
+-- players
+local respawntime = game.Players.RespawnTime
+-- functions
 uis.JumpRequest:Connect(function()
 if infjump then
 game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 end
 end)
+-- guitexts
 local textbutton9text = [[noclip and 
 anti fling
 ]]
@@ -23,14 +32,7 @@ tools
 local textbutton28text = [[teleport to
 spawn location
 ]]
-local playername = game.Players.LocalPlayer.Name
-local part = Instance.new("Part")
-part.Anchored = true
-part.Transparency = 1
-part.Parent = workspace
-part.CanCollide = false
-part.CFrame = rootpart.CFrame
-local respawntime = game.Players.RespawnTime
+-- gui
 local sasinickgui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")

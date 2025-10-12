@@ -61,6 +61,7 @@ local textbutton25 = Instance.new("TextButton")
 local textbutton26 = Instance.new("TextButton")
 local textbutton27 = Instance.new("TextButton")
 local textbutton28 = Instance.new("TextButton")
+local textbutton29 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -308,4 +309,11 @@ if spawnlocation:IsA("SpawnLocation") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.CFrame
 end
 end
+end)
+textbutton29.Parent = frame
+textbutton29.Text = "infinite yield"
+textbutton29.Position = UDim2.new(0.48, 0.01, 0.72)
+textbutton29.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton29.MouseButton1Click:Connect(function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)

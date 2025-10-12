@@ -54,6 +54,7 @@ local textbutton21 = Instance.new("TextButton")
 local textbutton22 = Instance.new("TextBox")
 local textbutton23 = Instance.new("TextButton")
 local textbutton24 = Instance.new("TextButton")
+local textbutton25 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -227,8 +228,8 @@ textbutton21.Position = UDim2.new(0.69, 0.01, 0.68)
 textbutton21.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton21.MouseButton1Click:Connect(function()
 for _, tools in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
-if tool:IsA("Tool") then
-tool.Parent = workspace[playername]
+if tools:IsA("Tool") then
+tools.Parent = workspace[playername]
 end
 end
 end)
@@ -261,4 +262,11 @@ textbutton24.Position = UDim2.new(0.69, 0.01, 0.21)
 textbutton24.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton24.MouseButton1Click:Connect(function()
 infjump = false
+end)
+textbutton25.Parent = frame
+textbutton25.Text = "unview player"
+textbutton25.Position = UDim2.new(0.50, 0.01, 0.21)
+textbutton25.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton25.MouseButton1Click:Connect(function()
+workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.HumanoidRootPart
 end)

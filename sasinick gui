@@ -1,4 +1,6 @@
 local uis = game:GetService("UserInputService")
+local ts = game:GetService("TeleportService")
+local p = game.Players.LocalPlayer
 local E = nil
 local Q = nil
 local pos = nil
@@ -351,16 +353,9 @@ end
 end
 end)
 textbutton32.Parent = frame
-textbutton32.Text = "bring car"
+textbutton32.Text = "rejoin"
 textbutton32.Position = UDim2.new(0.30, 0.01, 0.72)
 textbutton32.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton32.MouseButton1Click:Connect(function()
-local pos3 = game.Players.LocalPlayer.Character:GetPivot()
-for _, vehicleseat in pairs(workspace:GetDescendants()) do
-if vehicleseat:IsA("VehicleSeat") then
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = vehicleseat.CFrame
-task.wait(0.2)
-vehicleseat.Parent:PivotTo(pos3)
-end
-end
+ts:Teleport(game.PlaceId, p)
 end)

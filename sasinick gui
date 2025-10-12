@@ -18,6 +18,9 @@ n save
 local textbutton23text = [[drop all droppable
 tools
 ]]
+local textbutton28text = [[teleport to
+spawn location
+]]
 local playername = game.Players.LocalPlayer.Name
 local part = Instance.new("Part")
 part.Anchored = true
@@ -57,6 +60,7 @@ local textbutton24 = Instance.new("TextButton")
 local textbutton25 = Instance.new("TextButton")
 local textbutton26 = Instance.new("TextButton")
 local textbutton27 = Instance.new("TextButton")
+local textbutton28 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
 sasinickgui.ResetOnSpawn = false
@@ -291,6 +295,17 @@ textbutton27.MouseButton1Click:Connect(function()
 for _, vehicleseat in pairs(workspace:GetDescendants()) do
 if vehicleseat:IsA("VehicleSeat") then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = vehicleseat.CFrame
+end
+end
+end)
+textbutton28.Parent = frame
+textbutton28.Text = textbutton28text
+textbutton28.Position = UDim2.new(0.48, 0.01, 0.60)
+textbutton28.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton28.MouseButton1Click:Connect(function()
+for _, spawnlocation in pairs(workspace:GetDescendants()) do
+if spawnlocation:IsA("SpawnLocation") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.CFrame
 end
 end
 end)

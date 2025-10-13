@@ -1,6 +1,5 @@
 local d = game.Players.LocalPlayer.Name
 local uis = game:GetService("UserInputService")
-workspace.Gravity = 0
 for _, a in pairs(workspace[d]:GetDescendants()) do
 	if a:IsA("Accessory") then
 		if a:FindFirstChild("Handle") then

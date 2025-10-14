@@ -1,5 +1,6 @@
 local d = game.Players.LocalPlayer.Name
 local uis = game:GetService("UserInputService")
+workspace.Gravity = 0
 for _, a in pairs(workspace[d]:GetDescendants()) do
 	if a:IsA("Accessory") then
 		if a:FindFirstChild("Handle") then
@@ -35,6 +36,12 @@ if input.KeyCode == Enum.KeyCode.F then
 handle.Velocity = Vector3.new(0, 0, 0)
 end
 end)
+end		
+while true do
+if a.ReceiveAge == 0 then
+print("a")
+else
+print("b")
 end
-			end
+end
 		end

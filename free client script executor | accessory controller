@@ -41,8 +41,6 @@ print("a")
 workspace.Camera.CameraSubject = a.Handle
 else
 print("b")
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
-workspace.Camera.CameraSubject = a.Handle
 end
 end
 task.wait(0.1)

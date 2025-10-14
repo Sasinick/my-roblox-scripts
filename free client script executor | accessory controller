@@ -12,7 +12,6 @@ if handle:FindFirstChild("Mesh") then
 handle.Mesh:Destroy()
 end
 				end
-				handle.CanCollide = false
 uis.InputBegan:Connect(function(input, processsed)
 if processed then return end
 if input.KeyCode == Enum.KeyCode.E then
@@ -39,10 +38,13 @@ end
 end)
 end		
 while true do
+if a:FindFirstChild("Handle") then
 if a.Handle.ReceiveAge == 0 then
 print("a")
 else
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
 print("b")
+end
 end
 task.wait(0.1)
 end

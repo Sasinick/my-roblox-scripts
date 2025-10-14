@@ -8,6 +8,7 @@ for _, a in pairs(workspace[d]:GetDescendants()) do
 			local handle = a.Handle
 			if handle:FindFirstChild("AccessoryWeld") then
 				handle.AccessoryWeld:Destroy()
+workspace.Camera.CameraSubject = a.Handle
 if handle:FindFirstChild("Mesh") then
 handle.Mesh:Destroy()
 end
@@ -15,22 +16,22 @@ end
 uis.InputBegan:Connect(function(input, processsed)
 if processed then return end
 if input.KeyCode == Enum.KeyCode.E then
-handle.Velocity = Vector3.new(0, 3, 0)
+handle.Velocity = Vector3.new(0, 10, 0)
 end
 if input.KeyCode == Enum.KeyCode.Q then
-handle.Velocity = Vector3.new(0, -3, 0)
+handle.Velocity = Vector3.new(0, -10, 0)
 end
 if input.KeyCode == Enum.KeyCode.R then
-handle.Velocity = Vector3.new(3, 0, 0)
+handle.Velocity = Vector3.new(10, 0, 0)
 end
 if input.KeyCode == Enum.KeyCode.T then
-handle.Velocity = Vector3.new(-3, 0, 0)
+handle.Velocity = Vector3.new(-10, 0, 0)
 end
 if input.KeyCode == Enum.KeyCode.Z then
-handle.Velocity = Vector3.new(0, 0, 3)
+handle.Velocity = Vector3.new(0, 0, 10)
 end
 if input.KeyCode == Enum.KeyCode.X then
-handle.Velocity = Vector3.new(0, 0, -3)
+handle.Velocity = Vector3.new(0, 0, -10)
 end
 if input.KeyCode == Enum.KeyCode.F then
 handle.Velocity = Vector3.new(0, 0, 0)
@@ -41,9 +42,10 @@ while true do
 if a:FindFirstChild("Handle") then
 if a.Handle.ReceiveAge == 0 then
 print("a")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -10, 0)
 else
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
 print("b")
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
 end
 end
 task.wait(0.1)

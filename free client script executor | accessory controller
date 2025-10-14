@@ -37,12 +37,10 @@ end
 while true do
 if a:FindFirstChild("Handle") then
 if a.Handle.ReceiveAge == 0 then
-game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jump')
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
+print("a")
 workspace.Camera.CameraSubject = a.Handle
 else
 print("b")
-game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jump')
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
 workspace.Camera.CameraSubject = a.Handle
 end

@@ -45,7 +45,7 @@ vehicle seat
 local textbutton35text = [[all drop tools teleport
 to me
 ]]
-local sasinickgui = Instance.new("ScreenGui")
+local sasinickgui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
 local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")
 local textlabel = Instance.new("TextLabel")
@@ -84,9 +84,7 @@ local textbutton32 = Instance.new("TextButton")
 local textbutton33 = Instance.new("TextButton")
 local textbutton34 = Instance.new("TextButton")
 local textbutton35 = Instance.new("TextButton")
-sasinickgui.Name = "sasinickgui"
-sasinickgui.Parent = game.Players.LocalPlayer.PlayerGui
-sasinickgui.ResetOnSpawn = false
+sasinickgui.Name = "sasinickgui"sasinickgui.ResetOnSpawn = false
 frame.Parent = sasinickgui
 frame.Size = UDim2.new(0.2, 0.2, 0.2)
 uidraggingdetector.Parent = frame

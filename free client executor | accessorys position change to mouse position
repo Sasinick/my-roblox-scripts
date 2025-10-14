@@ -16,6 +16,7 @@ game:GetService("RunService").Stepped:Connect(function()
 local mouse = game.Players.LocalPlayer:GetMouse()
 local pos = mouse.Hit.p
 bodyPosition.Position = pos
+a.Handle.Velocity = Vector3.new(0, 0, 0)
 end)
 end
 			end

@@ -1,6 +1,7 @@
 local d = game.Players.LocalPlayer.Name
 local uis = game:GetService("UserInputService")
 workspace.Gravity = 0
+game.Players.LocalPlayer.ReplicationFocus = Workspace
 for _, a in pairs(workspace[d]:GetDescendants()) do
 	if a:IsA("Accessory") then
 		if a:FindFirstChild("Handle") then
@@ -38,10 +39,12 @@ end
 end)
 end		
 while true do
-if a.ReceiveAge == 0 then
+if a.Handle.ReceiveAge == 0 then
 print("a")
 else
 print("b")
 end
+task.wait(0.1)
 end
 		end
+end

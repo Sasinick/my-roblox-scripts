@@ -8,10 +8,6 @@ for _, a in pairs(workspace[d]:GetDescendants()) do
 			local handle = a.Handle
 			if handle:FindFirstChild("AccessoryWeld") then
 				handle.AccessoryWeld:Destroy()
-workspace.Camera.CameraSubject = a.Handle
-if handle:FindFirstChild("Mesh") then
-handle.Mesh:Destroy()
-end
 				end
 uis.InputBegan:Connect(function(input, processsed)
 if processed then return end
@@ -41,11 +37,14 @@ end
 while true do
 if a:FindFirstChild("Handle") then
 if a.Handle.ReceiveAge == 0 then
-print("a")
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -10, 0)
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jump')
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
+workspace.Camera.CameraSubject = a.Handle
 else
 print("b")
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jump')
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = a.Handle.CFrame
+workspace.Camera.CameraSubject = a.Handle
 end
 end
 task.wait(0.1)

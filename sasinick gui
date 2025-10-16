@@ -89,6 +89,7 @@ local textbutton34 = Instance.new("TextButton")
 local textbutton35 = Instance.new("TextButton")
 local textbutton36 = Instance.new("TextButton")
 local textbutton37 = Instance.new("TextButton")
+local textbutton38 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"sasinickgui.ResetOnSpawn = false
 frame.Parent = sasinickgui
 frame.Size = UDim2.new(0.2, 0.2, 0.2)
@@ -406,3 +407,7 @@ textbutton37.Parent = frame
 textbutton37.Text = ""
 textbutton37.Position = UDim2.new(0.15, 0.01, 0.24)
 textbutton37.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton38.Parent = frame
+textbutton38.Text = ""
+textbutton38.Position = UDim2.new(0.15, 0.01, 0.36)
+textbutton38.Size = UDim2.new(0.16, 0.16, 0.16)

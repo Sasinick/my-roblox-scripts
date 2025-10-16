@@ -54,6 +54,9 @@ ui
 local textbutton12text = [[tele
 port to player
 ]]
+local textbutton7text = [[a
+ll parts transparency
+]]
 local sasinickgui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
 local frame = Instance.new("Frame")
 local uidraggingdetector = Instance.new("UIDragDetector")
@@ -97,6 +100,7 @@ local textbutton36 = Instance.new("TextButton")
 local textbutton37 = Instance.new("TextButton")
 local textbutton38 = Instance.new("TextButton")
 local textbutton39 = Instance.new("TextButton")
+local textbutton40 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"
 sasinickgui.ResetOnSpawn = false
 frame.Parent = sasinickgui
@@ -142,7 +146,7 @@ textbutton4.FocusLost:Connect(function()
 	game.Players.LocalPlayer.Character.Humanoid.HipHeight = textbutton4.Text
 end)
 textbutton7.Parent = frame
-textbutton7.Text = "all parts transparency"
+textbutton7.Text = textbutton7text
 textbutton7.Position = UDim2.new(0.004, 0.1, 0.76)
 textbutton7.Size = UDim2.new(0.17, 0.16, 0.16)
 textbutton7.FocusLost:Connect(function()
@@ -423,3 +427,7 @@ textbutton39.Parent = frame
 textbutton39.Text = ""
 textbutton39.Position = UDim2.new(0.15, 0.01, 0.48)
 textbutton39.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton40.Parent = frame
+textbutton40.Text = ""
+textbutton40.Position = UDim2.new(0.15, 0.01, 0.60)
+textbutton40.Size = UDim2.new(0.16, 0.16, 0.16)

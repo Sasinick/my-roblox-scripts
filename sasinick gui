@@ -84,6 +84,7 @@ local textbutton32 = Instance.new("TextButton")
 local textbutton33 = Instance.new("TextButton")
 local textbutton34 = Instance.new("TextButton")
 local textbutton35 = Instance.new("TextButton")
+local textbutton36 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"sasinickgui.ResetOnSpawn = false
 frame.Parent = sasinickgui
 frame.Size = UDim2.new(0.2, 0.2, 0.2)
@@ -389,3 +390,11 @@ textbutton34.MouseButton1Click:Connect(function()
 	l.ColorShift_Bottom = fb[2]
 	l.ColorShift_Top = fb[3]
 end)
+textbutton35.Parent = frame
+textbutton35.Text = ""
+textbutton35.Position = UDim2.new(0.30, 0.01, 0.36)
+textbutton35.Size = UDim2.new(0.16, 0.16, 0.16)
+textbutton36.Parent = frame
+textbutton36.Text = ""
+textbutton36.Position = UDim2.new(0.3, 0.01, 0.24)
+textbutton36.Size = UDim2.new(0.16, 0.16, 0.16)

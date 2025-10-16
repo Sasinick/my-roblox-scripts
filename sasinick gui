@@ -30,8 +30,8 @@ end)
 local textbutton9text = [[noclip and 
 anti fling
 ]]
-local textbutton10text = [[locatio
-n save
+local textbutton10text = [[locati
+on save
 ]]
 local textbutton23text = [[drop all droppable
 tools
@@ -47,6 +47,12 @@ to me
 ]]
 local  textbutton2text = [[jump
 power
+]]
+local textlabeltext = [[SasinickG
+ui
+]]
+local textbutton12text = [[tele
+port to player
 ]]
 local sasinickgui = Instance.new("ScreenGui", game.Players.LocalPlayer.PlayerGui)
 local frame = Instance.new("Frame")
@@ -92,11 +98,11 @@ local textbutton37 = Instance.new("TextButton")
 local textbutton38 = Instance.new("TextButton")
 sasinickgui.Name = "sasinickgui"sasinickgui.ResetOnSpawn = false
 frame.Parent = sasinickgui
-frame.Size = UDim2.new(0.2, 0.2, 0.2)
+frame.Size = UDim2.new(0, 600, 0, 200)
 uidraggingdetector.Parent = frame
 textlabel.Parent = frame
 textlabel.Size = UDim2.new(0.2, 0.2, 0.2)
-textlabel.Text = "SasinickGui"
+textlabel.Text = textlabeltext
 textlabel.Position = UDim2.new(0.004, 0.1, 0.01)
 textbutton1.Parent = frame
 textbutton1.Text = "walkspeed"
@@ -190,7 +196,7 @@ textbutton11.MouseButton1Click:Connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 textbutton12.Parent = frame
-textbutton12.Text = "teleport to player"
+textbutton12.Text = textbutton12text
 textbutton12.Position = UDim2.new(0.69, 0.01, 0.01)
 textbutton12.Size = UDim2.new(0.16, 0.16, 0.16)
 textbutton12.FocusLost:Connect(function()

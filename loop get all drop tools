@@ -1,0 +1,12 @@
+while true do
+for _, a in pairs(workspace:GetDescendants()) do
+if a:IsA("Tool") then
+if not a.Parent:FindFirstChild("Humanoid") then
+if a:FindFirstChild("Handle") then
+a.Handle.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+end
+end
+end
+end
+task.wait(0.1)
+end

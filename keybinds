@@ -1,0 +1,11 @@
+local uis = game:GetService("UserInputService")
+local player = game.Players.LocalPlayer
+local character = player.Character
+uis.InputBegan:Connect(function(input, gameProcessedEvent)
+if gameProcessedEvent the return end
+if input.KeyCode == Enum.KeyCode.Q then
+local mouse = player:GetMouse()
+local pos = mouse.Hit.Position
+character.HumanoidRootPart.CFrame = pos
+end
+end)

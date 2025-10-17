@@ -26,6 +26,9 @@ end
 end
 end
 end
+if input.KeyCode == Enum.KeyCode.R then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+end
 end)
 rs.Stepped:Connect(function()
 if noclip then

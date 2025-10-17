@@ -6,6 +6,7 @@ if gameProcessedEvent then return end
 if input.KeyCode == Enum.KeyCode.Q then
 local mouse = player:GetMouse()
 local pos = mouse.Hit.Position
-character.HumanoidRootPart.Position = pos
+local cf = CFrame.new(pos.X, pos.Y, pos.Z)
+character.HumanoidRootPart.CFrame = cf
 end
 end)

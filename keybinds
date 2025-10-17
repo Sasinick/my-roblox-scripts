@@ -1,4 +1,7 @@
+local noclip = false
+local e = true
 local uis = game:GetService("UserInputService")
+local rs = game:GetService("RunService")
 local player = game.Players.LocalPlayer
 uis.InputBegan:Connect(function(input, gameProcessedEvent)
 if gameProcessedEvent then return end
@@ -10,6 +13,26 @@ local cf = CFrame.new(pos.X, pos.Y, pos.Z)
 character.HumanoidRootPart.CFrame = cf
 end
 if input.KeyCode == Enum.KeyCode.E then
-
+if e == true then
+e = false
+noclip = true
+else
+e = true
+noclip = false
+for _, a in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = true
+end
+end
+end
+end
+end)
+rs.Stepped:Connect(function()
+if noclip then
+for _, a in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+if a:IsA("BasePart") then
+a.CanCollide = false
+end
+end
 end
 end)

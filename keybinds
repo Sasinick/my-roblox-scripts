@@ -27,7 +27,10 @@ end
 end
 end
 if input.KeyCode == Enum.KeyCode.R then
-game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + Vector3.new(0, 20, 0)
+end
+if input.KeyCode == Enum.KeyCode.T then
+player.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame + Vector3.new(0, -20, 0)
 end
 end)
 rs.Stepped:Connect(function()
